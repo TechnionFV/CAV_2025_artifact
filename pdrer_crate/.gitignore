@@ -1,0 +1,12 @@
+/target
+/Cargo.lock
+.vscode/
+aigtoaig
+abc
+abc.history
+.idea
+perf.data
+perf.data.old
+*.txt
+*.wit
+certificate.aig
