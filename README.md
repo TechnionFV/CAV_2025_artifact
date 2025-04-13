@@ -12,23 +12,6 @@ This artifact is built on top of a formal verification framework developed by us
 * If you claim an , it is sufficient to upload your Docker or VM image to a repository that provides a DOI (e.g. Zenodo, figshare, or Dryad) and use this DOI link in your artifact submission.
 * If you claim a functional or reusable badge, provide justification in the corresponding sections below. Note that an artifact that claims a reusable badge must also fulfil the criteria for the functional badge, in which case only the reusable badge will be awarded.
 
-## File structure
-
-```bash
-.
-├── README.md               (this file)
-├── LICENSE                 (GPL3 license)
-├── benchmarks_aig          (Benchmark files)
-│   ├── aig_inputs          (AIGER benchmarks)
-│   ├── Dockerfile          (Dockerfile to reproduce hwmcc benchmarks)
-│   └── convert.py          (Script for pre-processing AIG files)
-├── pdrer_crate
-│   ├── Dockerfile          (Dockerfile to run the PDR/PDRER as a standalone tool for proving AIG files)
-│   ├── Cargo.toml          (Rust open-source dependencies file)
-│   └── hwmcc24_fold_fraigy_orchestrate
-└── evaluate.sh
-```
-
 
 
 ## Creating HWMCC benchmarks
@@ -69,12 +52,38 @@ List resource and time requirements for accessing your artifact.
 
 ## Structure and Content
 
-List the contents (or its most relevant components) of your artifact.
+
+```bash
+.
+├── README.md               (this file)
+├── LICENSE                 (GPL3 license)
+├── benchmarks_aig          (Benchmark files)
+│   ├── aig_inputs          (AIGER benchmarks)
+│   ├── Dockerfile          (Dockerfile to reproduce hwmcc benchmarks)
+│   └── convert.py          (Script for pre-processing AIG files)
+├── pdrer_crate
+│   ├── Dockerfile          (Dockerfile to run the PDR/PDRER as a standalone tool for proving AIG files)
+│   ├── Cargo.toml          (Rust dependencies file, all open-source)
+│   ├── src                 (Location of PDR and PDER)
+│   └── examples            (Contains the implementation of the main function)
+└── evaluate.sh
+```
 
 
 ## Getting Started
 
 Describe how to execute and briefly test your artifact in order to complete the smoke-test phase of the evaluation. Below is an example for Docker images.
+
+First make sure docker is running properly by running:
+```
+docker run hello-world
+```
+
+Then check that you are able to run the PDR/PDRER engine by running:
+```
+docker build -t pdr_image pdrer_crate/.
+docker run --name pdr pdr_image
+```
 
 
 ### Getting Started (example)

@@ -506,13 +506,6 @@ impl AndInverterGraph {
     ///
     /// # Examples
     ///
-    /// ```
-    /// use rust_formal_verification::models::AndInverterGraph;
-    /// use std::fs;
-    /// let file_path = "tests/examples/hwmcc20/2020/mann/stack-p2.aig";
-    /// let file_as_vec_of_bytes = fs::read(file_path).unwrap_or_else(|_| panic!("Unable to read the '.aig' file {file_path}"));
-    /// let aig = AndInverterGraph::from_vector_of_bytes(&file_as_vec_of_bytes).unwrap();
-    /// ```
     pub fn from_vector_of_bytes(vec_of_bytes: &[u8]) -> Result<Self, String> {
         if vec_of_bytes.is_empty() {
             return Err(String::from(
@@ -556,12 +549,6 @@ impl AndInverterGraph {
     ///
     /// * `file_path` - the path to the '.aig' file desired.
     ///
-    /// # Examples
-    /// ```
-    /// use rust_formal_verification::models::AndInverterGraph;
-    /// let file_path = "tests/examples/hwmcc20/2020/mann/stack-p2.aig";
-    /// let aig = AndInverterGraph::from_aig_path(file_path).unwrap();
-    /// ```
     pub fn from_aig_path(file_path: &str) -> Result<Self, String> {
         let file_as_vec_of_bytes = fs::read(file_path)
             .unwrap_or_else(|_| panic!("Unable to read the '.aig' file {file_path}"));
