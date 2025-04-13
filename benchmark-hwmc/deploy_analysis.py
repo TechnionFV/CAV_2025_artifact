@@ -223,11 +223,12 @@ def main():
     utils.run_cmd("rm -rf results")
     utils.run_cmd(f"cp -r {work_dir}/results ./results")
 
+    print(commit_msg , flush=True)
     # commit
-    utils.run_cmd("git add .")
-    utils.run_cmd('git config user.email "automatic.commit@notreal.notreal"')
-    utils.run_cmd('git config user.name "Automatic Commit"')
-    utils.run_cmd(f"git commit -m '{commit_msg}'")
+    # utils.run_cmd("git add .")
+    # utils.run_cmd('git config user.email "automatic.commit@notreal.notreal"')
+    # utils.run_cmd('git config user.name "Automatic Commit"')
+    # utils.run_cmd(f"git commit -m '{commit_msg}'")
 
 
 if __name__ == "__main__":

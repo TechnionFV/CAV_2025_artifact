@@ -40,7 +40,7 @@ class RFVParams:
         self.branch = branch
 
     def __str__(self):
-        r = f"rfv PDR b {self.branch}"
+        r = f"rfv PDR"
         if self.default:
             r += " Default"
             return r
@@ -505,13 +505,13 @@ def rfv_pdr_deployment(
 ) -> Deployment:
     r = Deployment()
     r.name = str(params).lower().replace(" ", "_")
-    fetch_cmd = f"git clone -b {params.branch} --depth 1 https://github.com/sirandreww/rust-formal-verification.git && rm -rf ./rust-formal-verification/tests"
+    fetch_cmd = f"cp -r /usr/src/pdrer_crate ./rust-formal-verification"
     r.fetch_command = lambda: fetch_cmd
     r.cd_after_fetch = lambda: "rust-formal-verification"
     r.compilation_command = lambda: "RUSTFLAGS='-C target-feature=+crt-static' cargo build --release --example pdr_engine_for_hwmcc --target x86_64-unknown-linux-gnu && cp ./target/x86_64-unknown-linux-gnu/release/examples/pdr_engine_for_hwmcc ./pdr_engine_for_hwmcc && cargo clean"
     r.run_command = lambda aig_file: params.get_run_command(aig_file=aig_file)
     r.version = lambda: get_current_commit_hash()
-    if params.branch == "dev":
+    if False:
         r.individual_analysis = analyze_output_json
     else:
         r.individual_analysis = analyze_output

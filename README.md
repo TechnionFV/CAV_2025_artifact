@@ -7,11 +7,10 @@ This artifact is built on top of a formal verification framework developed by us
 * Title of the submitted paper: `Property Directed Reachability with Extended Resolution`
 * Submission number: `174`
 * Claimed badges, all three badges:
-* Available badge: DOI is `?`
-
-* If you claim an , it is sufficient to upload your Docker or VM image to a repository that provides a DOI (e.g. Zenodo, figshare, or Dryad) and use this DOI link in your artifact submission.
-* If you claim a functional or reusable badge, provide justification in the corresponding sections below. Note that an artifact that claims a reusable badge must also fulfil the criteria for the functional badge, in which case only the reusable badge will be awarded.
-
+* We request that this artifact be considered for all three badges.
+* Available Badge: The artifact is made available on Zenodo, the DOI is `?`
+* Functional Badge: The artifact documents the steps that need to be taken to reproduce the results in the paper. The documentation includes a dockerfile to retrace the exact steps needed.
+* Reusable Badge: It also provides a dockerfile to run the proof engine as a standalone tool. This allows for checking arbitrary AIGER files and producing proofs and counterexamples. As well as allowing for fine grained control over all parameters mentioned in the paper, as well as some parameters that were not.
 
 
 ## Creating HWMCC benchmarks
@@ -43,6 +42,8 @@ Furthermore, as part of our paper, we produced our own benchmarks to demonstrate
 ## Artifact Requirements
 
 List resource and time requirements for accessing your artifact.
+
+The artifact 
 
 * Precisely state the resource requirements (RAM, number of cores, CPU frequency, etc.) needed to evaluate your artifact.
 * Provide for each task/step of the evaluation (an estimate of) how long it will take to perform it.
