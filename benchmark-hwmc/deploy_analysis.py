@@ -225,6 +225,7 @@ def main():
     utils.run_cmd(f"cp -r {work_dir}/results ./results")
 
     print(commit_msg , flush=True)
+    print("#" * 50 + "Resulting CSV File" + "#" * 50, flush=True)
     # print CSV file
     with open(f"{work_dir}/results/deployment_0.csv") as f:
         print(f.read())
