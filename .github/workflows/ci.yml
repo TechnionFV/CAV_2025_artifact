@@ -26,4 +26,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker build -t exp .
-      - run: docker run exp --local -c 1 -d 18 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis |& tee log_file.txt
+      - run: docker run exp --help
+      - run: docker run exp --local -c 1 -d 0 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
+      - run: docker run exp --local -c 1 -d 7 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
+      - run: docker run exp --local -c 1 -d 8 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
+      - run: docker run exp --local -c 1 -d 8 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis |& tee log_file.txt
+      - run: cat log_file.txt
