@@ -67,7 +67,7 @@ docker run \
     aig_inputs/hwmcc19_fold_fraigy_orchestrate/aig/goel/industry/cal3/cal3.aig
 ```
 
-The output of the previous commands should be similar to `expected_results\smoke_test.out`
+The output of the previous commands should be similar to `expected_results/smoke_test.out`
 
 
 ## Creating HWMCC benchmarks
