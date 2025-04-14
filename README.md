@@ -7,7 +7,7 @@ The parts of it that are needed to re-produce the results in our paper are prese
 * Title of the submitted paper: `Property Directed Reachability with Extended Resolution`
 * Submission number: `174`
 * We request that this artifact be considered for all three badges.
-    * Available Badge: The artifact is made available on Zenodo, the DOI is `?`
+    * Available Badge: The artifact is made available on Zenodo, the DOI is [![DOI](https://zenodo.org/badge/965762135.svg)](https://doi.org/10.5281/zenodo.15213680)
     * Functional Badge: The artifact documents the steps that need to be taken to reproduce the results in the paper. The documentation includes a dockerfile to retrace the exact steps needed.
     * Reusable Badge: It also provides a dockerfile to run the proof solver as a standalone tool. This allows for checking arbitrary AIGER files and producing proofs and counterexamples. As well as allowing for fine grained control over all parameters mentioned in the paper, as well as some parameters that were not.
 
