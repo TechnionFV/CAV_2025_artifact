@@ -30,5 +30,4 @@ RUN rm -rf /var/lib/apt/lists/*
 COPY --from=builder /usr/src/rust_code/target/x86_64-unknown-linux-gnu/release/examples/pdr_engine_for_hwmcc /usr/local/bin/pdr_engine_for_hwmcc
 
 # Set the default command to run the specified example executable
-ENTRYPOINT  ["/usr/local/bin/pdr_engine_for_hwmcc"]
-CMD ["pdr_engine_for_hwmcc"]
+ENTRYPOINT  ["pdr_engine_for_hwmcc"]

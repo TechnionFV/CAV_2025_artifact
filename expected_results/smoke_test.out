@@ -1,0 +1,347 @@
+aig_file_path = aig_inputs/hwmcc19_fold_fraigy_orchestrate/aig/goel/industry/cal3/cal3.aig
+Size = 532, Simplifying circuit before using proof engine:
+Elapsed time = 0.000 sec, size = 531, Remove unused signals.
+Elapsed time = 0.000 sec, size = 531, Structural hashing.
+Elapsed time = 0.000 sec, size = 531, Remove unused signals.
+Elapsed time = 0.000 sec, size = 531, Detect 4 input cuts.
+Elapsed time = 0.000 sec, size = 445, Remove unused signals.
+Elapsed time = 0.000 sec, size = 365, Merge and gates.
+Elapsed time = 0.000 sec, size = 365, Condense circuit.
+Number of state variables = 23
+Number of initialized latches = 23
+Number of input variables = 54
+Number of constraints = 0
+Number of clauses in CNF = 998
+Number of variables in CNF = 364
+Number of literals in CNF = 2534
+Time preparing circuit = 0.000972434
+Parameters:
+-------------------------------------------------------------------------
+| Parameter                                      | Value                |
+-------------------------------------------------------------------------
+| seed                                           | 43                   |
+| start_time.unwrap().elapsed().as_secs_f32()    | 0.010394304          |
+| timeout.as_secs_f32()                          | 18446744000000000000 |
+| max_depth                                      | 18446744073709551615 |
+| verbose                                        | true                 |
+| should_print_time_stats_during_run             | false                |
+| should_print_clauses_when_added                | false                |
+| should_print_clauses_when_added_as_ternary     | false                |
+| should_print_proof_obligations                 | false                |
+| should_print_when_extension_variable_is_added  | false                |
+| should_print_largest_inductive_cycle_progress  | false                |
+| should_print_bva_debug_information             | false                |
+| minimum_clause_length_to_generalize            | 2                    |
+| decay                                          | 0.9                  |
+| insert_transition_clauses_reversed             | false                |
+| insert_extension_variable_definitions_reversed | false                |
+| insert_frame_clauses_reversed                  | false                |
+| use_only_one_solver                            | true                 |
+| use_infinite_frame                             | true                 |
+| infinite_frame_propagation_limit               | 18446744073709551615 |
+| continuously_insert_in_f_inf_generalize        | false                |
+| assume_constraints_in_second_cycle             | false                |
+| simplify_cnf_at_construction                   | true                 |
+| perform_lic_analysis                           | false                |
+| use_extension_variables_in_lic_analysis        | false                |
+| lic_calls_in_stage_1                           | 100                  |
+| lic_min_success_rate_in_stage_2                | 0.001                |
+| lic_max_success_rate_in_stage_2                | 2                    |
+| propagate_from_lowest_changed_frame            | false                |
+| er                                             | true                 |
+| er_generalization                              | true                 |
+| er_delta                                       | 1408                 |
+| er_fp                                          | true                 |
+| er_fp_for_f_inf                                | true                 |
+| er_impl                                        | true                 |
+| min_match_count_to_add_definition              | 1                    |
+| generalize_using_ctg                           | false                |
+| generalize_using_ctg_max_depth                 | 1                    |
+| generalize_using_ctg_max_ctgs                  | 3                    |
+-------------------------------------------------------------------------
+
+--------------------------------------------------------------
+| Key                                          | Value       |
+--------------------------------------------------------------
+| Title                                        | START       |
+| Depth                                        | 0           |
+| Average state size before ternary simulation | NaN         |
+| Average state size after ternary simulation  | NaN         |
+| Number of ternary simulation calls           | 0           |
+| Average state size before generalization     | NaN         |
+| Average state size after generalization      | NaN         |
+| Number of generalize simulation calls        | 0           |
+| Number of LIC analysis calls                 | 0           |
+| Number of LIC analysis calls (successful)    | 0           |
+| Total memory used (MB)                       | 0           |
+| Proof obligations                            | 0           |
+| Trace Tree size                              | 0           |
+| Extension Variables                          | 0           |
+| XOR Extension Variables                      | 0           |
+| AND Extension Variables                      | 0           |
+| Elapsed                                      | 0.010816484 |
+| Delta of Frame 0                             | 0           |
+| Delta of Infinite Frame                      | 0           |
+| Total Clauses                                | 0           |
+--------------------------------------------------------------
+---------------------------------------------------------------------
+| Key                                          | Value              |
+---------------------------------------------------------------------
+| Title                                        | Before Propagating |
+| Depth                                        | 0                  |
+| Average state size before ternary simulation | NaN                |
+| Average state size after ternary simulation  | NaN                |
+| Number of ternary simulation calls           | 0                  |
+| Average state size before generalization     | NaN                |
+| Average state size after generalization      | NaN                |
+| Number of generalize simulation calls        | 0                  |
+| Number of LIC analysis calls                 | 0                  |
+| Number of LIC analysis calls (successful)    | 0                  |
+| Total memory used (MB)                       | 0                  |
+| Number of SAT calls                          | 1                  |
+| Number of SAT calls (UNSAT)                  | 1                  |
+| Proof obligations                            | 0                  |
+| Trace Tree size                              | 0                  |
+| Extension Variables                          | 0                  |
+| XOR Extension Variables                      | 0                  |
+| AND Extension Variables                      | 0                  |
+| Elapsed                                      | 0.013127044        |
+| Delta of Frame 0                             | 0                  |
+| Delta of Infinite Frame                      | 0                  |
+| Total Clauses                                | 0                  |
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+| Key                                          | Value              |
+---------------------------------------------------------------------
+| Title                                        | Before Propagating |
+| Depth                                        | 1                  |
+| Average state size before ternary simulation | 21.0000            |
+| Average state size after ternary simulation  | 14.0000            |
+| Number of ternary simulation calls           | 1                  |
+| Average state size before generalization     | 1.0000             |
+| Average state size after generalization      | 1.0000             |
+| Number of generalize simulation calls        | 1                  |
+| Number of LIC analysis calls                 | 0                  |
+| Number of LIC analysis calls (successful)    | 0                  |
+| Total memory used (MB)                       | 0                  |
+| Number of SAT calls                          | 4                  |
+| Number of SAT calls (SAT)                    | 1                  |
+| Number of SAT calls (UNSAT)                  | 3                  |
+| Total Proof Obligations                      | 1                  |
+| Violating State Developed                    | 1                  |
+| Proof obligations                            | 0                  |
+| Trace Tree size                              | 1                  |
+| Extension Variables                          | 0                  |
+| XOR Extension Variables                      | 0                  |
+| AND Extension Variables                      | 0                  |
+| Elapsed                                      | 0.014066916        |
+| Delta of Frame 0                             | 0                  |
+| Delta of Frame 1                             | 1                  |
+| Delta of Frame 2                             | 0                  |
+| Delta of Infinite Frame                      | 0                  |
+| Total Clauses                                | 1                  |
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+| Key                                          | Value              |
+---------------------------------------------------------------------
+| Title                                        | Before Propagating |
+| Depth                                        | 2                  |
+| Average state size before ternary simulation | 21.0000            |
+| Average state size after ternary simulation  | 14.0625            |
+| Number of ternary simulation calls           | 16                 |
+| Average state size before generalization     | 6.5000             |
+| Average state size after generalization      | 3.8125             |
+| Number of generalize simulation calls        | 16                 |
+| Number of LIC analysis calls                 | 0                  |
+| Number of LIC analysis calls (successful)    | 0                  |
+| Total memory used (MB)                       | 0                  |
+| Number of SAT calls                          | 139                |
+| Number of SAT calls (SAT)                    | 77                 |
+| Number of SAT calls (UNSAT)                  | 62                 |
+| Propagation Unsuccessful                     | 1                  |
+| Total Proof Obligations                      | 16                 |
+| Violating State Developed                    | 16                 |
+| does_a_imply_b d_lib empty                   | 120                |
+| does_a_imply_b total calls                   | 120                |
+| Proof obligations                            | 0                  |
+| Trace Tree size                              | 15                 |
+| Extension Variables                          | 0                  |
+| XOR Extension Variables                      | 0                  |
+| AND Extension Variables                      | 0                  |
+| Elapsed                                      | 0.017063957        |
+| Delta of Frame 0                             | 0                  |
+| Delta of Frame 1                             | 1                  |
+| Delta of Frame 2                             | 15                 |
+| Delta of Frame 3                             | 0                  |
+| Delta of Infinite Frame                      | 0                  |
+| Total Clauses                                | 16                 |
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+| Key                                          | Value              |
+---------------------------------------------------------------------
+| Title                                        | Before Propagating |
+| Depth                                        | 3                  |
+| Average state size before ternary simulation | 20.9756            |
+| Average state size after ternary simulation  | 14.6585            |
+| Number of ternary simulation calls           | 41                 |
+| Average state size before generalization     | 7.3077             |
+| Average state size after generalization      | 4.1026             |
+| Number of generalize simulation calls        | 39                 |
+| Number of LIC analysis calls                 | 0                  |
+| Number of LIC analysis calls (successful)    | 0                  |
+| Total memory used (MB)                       | 0                  |
+| Number of SAT calls                          | 391                |
+| Number of SAT calls (SAT)                    | 220                |
+| Number of SAT calls (UNSAT)                  | 171                |
+| Propagation Successful                       | 1                  |
+| Propagation Unsuccessful                     | 17                 |
+| Total Proof Obligations                      | 46                 |
+| Violating State Developed                    | 34                 |
+| does_a_imply_b d_lib empty                   | 707                |
+| does_a_imply_b solved by subsumption (true)  | 5                  |
+| does_a_imply_b total calls                   | 712                |
+| Proof obligations                            | 0                  |
+| Trace Tree size                              | 22                 |
+| Extension Variables                          | 0                  |
+| XOR Extension Variables                      | 0                  |
+| AND Extension Variables                      | 0                  |
+| Elapsed                                      | 0.023742639        |
+| Delta of Frame 0                             | 0                  |
+| Delta of Frame 1                             | 1                  |
+| Delta of Frame 2                             | 14                 |
+| Delta of Frame 3                             | 19                 |
+| Delta of Frame 4                             | 0                  |
+| Delta of Frame 5                             | 0                  |
+| Delta of Infinite Frame                      | 0                  |
+| Total Clauses                                | 34                 |
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+| Key                                          | Value              |
+---------------------------------------------------------------------
+| Title                                        | Before Propagating |
+| Depth                                        | 4                  |
+| Average state size before ternary simulation | 20.6000            |
+| Average state size after ternary simulation  | 14.6400            |
+| Number of ternary simulation calls           | 50                 |
+| Average state size before generalization     | 7.0222             |
+| Average state size after generalization      | 4.1333             |
+| Number of generalize simulation calls        | 45                 |
+| Number of LIC analysis calls                 | 0                  |
+| Number of LIC analysis calls (successful)    | 0                  |
+| Total memory used (MB)                       | 0                  |
+| Number of SAT calls                          | 488                |
+| Number of SAT calls (SAT)                    | 271                |
+| Number of SAT calls (UNSAT)                  | 217                |
+| Propagation Successful                       | 32                 |
+| Propagation Unsuccessful                     | 43                 |
+| Total Proof Obligations                      | 56                 |
+| Violating State Developed                    | 39                 |
+| does_a_imply_b d_lib empty                   | 1288               |
+| does_a_imply_b solved by subsumption (true)  | 19                 |
+| does_a_imply_b total calls                   | 1307               |
+| Proof obligations                            | 0                  |
+| Trace Tree size                              | 26                 |
+| Extension Variables                          | 0                  |
+| XOR Extension Variables                      | 0                  |
+| AND Extension Variables                      | 0                  |
+| Elapsed                                      | 0.027967827        |
+| Delta of Frame 0                             | 0                  |
+| Delta of Frame 1                             | 1                  |
+| Delta of Frame 2                             | 1                  |
+| Delta of Frame 3                             | 3                  |
+| Delta of Frame 4                             | 21                 |
+| Delta of Frame 5                             | 0                  |
+| Delta of Frame 6                             | 0                  |
+| Delta of Infinite Frame                      | 0                  |
+| Total Clauses                                | 26                 |
+---------------------------------------------------------------------
+--------------------------------------------------------------
+| Key                                          | Value       |
+--------------------------------------------------------------
+| Title                                        | DONE        |
+| Depth                                        | 5           |
+| Average state size before ternary simulation | 20.6000     |
+| Average state size after ternary simulation  | 14.6400     |
+| Number of ternary simulation calls           | 50          |
+| Average state size before generalization     | 7.0222      |
+| Average state size after generalization      | 4.1333      |
+| Number of generalize simulation calls        | 45          |
+| Number of LIC analysis calls                 | 0           |
+| Number of LIC analysis calls (successful)    | 0           |
+| Total memory used (MB)                       | 0           |
+| Number of SAT calls                          | 490         |
+| Number of SAT calls (SAT)                    | 272         |
+| Number of SAT calls (UNSAT)                  | 218         |
+| Propagation Successful                       | 33          |
+| Propagation Unsuccessful                     | 44          |
+| Total Proof Obligations                      | 56          |
+| Violating State Developed                    | 39          |
+| does_a_imply_b d_lib empty                   | 1290        |
+| does_a_imply_b solved by subsumption (true)  | 20          |
+| does_a_imply_b total calls                   | 1310        |
+| Proof obligations                            | 0           |
+| Trace Tree size                              | 26          |
+| Extension Variables                          | 0           |
+| XOR Extension Variables                      | 0           |
+| AND Extension Variables                      | 0           |
+| Elapsed                                      | 0.028335394 |
+| Delta of Frame 0                             | 0           |
+| Delta of Frame 1                             | 1           |
+| Delta of Frame 2                             | 0           |
+| Delta of Frame 3                             | 3           |
+| Delta of Frame 4                             | 21          |
+| Delta of Frame 5                             | 0           |
+| Delta of Frame 6                             | 0           |
+| Delta of Infinite Frame                      | 0           |
+| Total Clauses                                | 25          |
+--------------------------------------------------------------
+Time Statistics:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Name                                                                                                                                                                                | Total | Count | Average | Percentage |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| rust_formal_verification::engines::pdr::block_cube::<impl rust_formal_verification::engines::pdr::PropertyDirectedReachability<_, _>>::add_clause_to_frame_at_least                 | 0.001 | 45    | 0.00001 | 1.829      |
+| rust_formal_verification::engines::pdr::block_cube::<impl rust_formal_verification::engines::pdr::PropertyDirectedReachability<_, _>>::make_simplified_cube_non_initial             | 0.000 | 45    | 0.00000 | 0.042      |
+| rust_formal_verification::engines::pdr::block_cube::<impl rust_formal_verification::engines::pdr::PropertyDirectedReachability<_, _>>::no_predecessor_of_cube                       | 0.006 | 45    | 0.00013 | 20.509     |
+| rust_formal_verification::engines::pdr::block_cube::<impl rust_formal_verification::engines::pdr::PropertyDirectedReachability<_, _>>::recursively_block_cube                       | 0.008 | 39    | 0.00020 | 27.001     |
+| rust_formal_verification::engines::pdr::definition_library::solve::<impl rust_formal_verification::engines::pdr::definition_library::DefinitionLibrary<_, _>>::clause_to_bdd        | 0.000 | 37    | 0.00000 | 0.312      |
+| rust_formal_verification::engines::pdr::definition_library::solve::<impl rust_formal_verification::engines::pdr::definition_library::DefinitionLibrary<_, _>>::clause_to_bdd_cached | 0.000 | 45    | 0.00000 | 0.406      |
+| rust_formal_verification::engines::pdr::frames::complex::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::get_cnf_of_frame                                      | 0.000 | 1     | 0.00000 | 0.003      |
+| rust_formal_verification::engines::pdr::frames::extension_variables::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::call_condense                             | 0.000 | 56    | 0.00000 | 0.007      |
+| rust_formal_verification::engines::pdr::frames::generalize::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::generalize                                         | 0.005 | 45    | 0.00012 | 18.599     |
+| rust_formal_verification::engines::pdr::frames::generalize::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::generalize_relative_to_frame                       | 0.005 | 45    | 0.00012 | 18.449     |
+| rust_formal_verification::engines::pdr::frames::generalize::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::generalize_using_definitions_relative_to_frame     | 0.000 | 45    | 0.00000 | 0.018      |
+| rust_formal_verification::engines::pdr::frames::insert::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::does_a_imply_b                                         | 0.000 | 1310  | 0.00000 | 0.243      |
+| rust_formal_verification::engines::pdr::frames::insert::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::insert_clause_to_exact_frame                           | 0.000 | 78    | 0.00000 | 0.834      |
+| rust_formal_verification::engines::pdr::frames::insert::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::insert_clause_to_highest_frame_possible                | 0.001 | 45    | 0.00001 | 1.813      |
+| rust_formal_verification::engines::pdr::frames::insert::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::make_delta_element                                     | 0.000 | 45    | 0.00000 | 0.471      |
+| rust_formal_verification::engines::pdr::frames::insert::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::mark_clause_added                                      | 0.000 | 78    | 0.00000 | 0.699      |
+| rust_formal_verification::engines::pdr::frames::propagate::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::propagate                                           | 0.002 | 5     | 0.00045 | 7.962      |
+| rust_formal_verification::engines::pdr::frames::propagate::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::propagate_blocked_cubes_in_range                    | 0.003 | 7     | 0.00038 | 9.249      |
+| rust_formal_verification::engines::pdr::frames::propagate_f_inf::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::propagate_to_infinite_frame                   | 0.002 | 4     | 0.00039 | 5.494      |
+| rust_formal_verification::engines::pdr::frames::sat_calls::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::is_clause_satisfied_by_all_initial_states           | 0.000 | 315   | 0.00000 | 0.108      |
+| rust_formal_verification::engines::pdr::frames::sat_calls::<impl rust_formal_verification::engines::pdr::frames::Frames<_, _>>::is_cube_initial                                     | 0.000 | 151   | 0.00000 | 0.103      |
+| rust_formal_verification::engines::pdr::prove::<impl rust_formal_verification::engines::pdr::PropertyDirectedReachability<_, _>>::call_propagate                                    | 0.004 | 5     | 0.00077 | 13.480     |
+| rust_formal_verification::engines::pdr::prove::<impl rust_formal_verification::engines::pdr::PropertyDirectedReachability<_, _>>::increase_pdr_depth                                | 0.004 | 5     | 0.00077 | 13.491     |
+| rust_formal_verification::engines::pdr::prove::<impl rust_formal_verification::engines::pdr::PropertyDirectedReachability<_, _>>::perform_proof_iteration                           | 0.013 | 44    | 0.00030 | 46.540     |
+| rust_formal_verification::engines::pdr::solvers::sat_calls::<impl rust_formal_verification::engines::pdr::solvers::Solvers<_>>::do_ternary_simulation                               | 0.001 | 50    | 0.00002 | 3.504      |
+| rust_formal_verification::engines::pdr::solvers::sat_calls::<impl rust_formal_verification::engines::pdr::solvers::Solvers<_>>::extract_variables_from_solver                       | 0.000 | 31    | 0.00000 | 0.285      |
+| rust_formal_verification::engines::pdr::solvers::sat_calls::<impl rust_formal_verification::engines::pdr::solvers::Solvers<_>>::get_bad_cube                                        | 0.002 | 44    | 0.00004 | 6.805      |
+| rust_formal_verification::engines::pdr::solvers::sat_calls::<impl rust_formal_verification::engines::pdr::solvers::Solvers<_>>::get_predecessor_of_cube                             | 0.002 | 56    | 0.00003 | 6.278      |
+| rust_formal_verification::engines::pdr::solvers::sat_calls::<impl rust_formal_verification::engines::pdr::solvers::Solvers<_>>::is_clause_guaranteed_after_transition               | 0.002 | 64    | 0.00004 | 8.475      |
+| rust_formal_verification::engines::pdr::solvers::sat_calls::<impl rust_formal_verification::engines::pdr::solvers::Solvers<_>>::is_clause_guaranteed_after_transition_if_assumed    | 0.005 | 326   | 0.00002 | 18.937     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total time = 0.028
+
+-----------------------------------------------
+| Name | Total | Count | Average | Percentage |
+-----------------------------------------------
+-----------------------------------------------
+Total time = 0.029
+
+definition library:
+------------------------------------
+| # | Variable | Function | Inputs |
+------------------------------------
+------------------------------------
+Safe, Proof found with 24 clauses and 0 extension variables.
+Elapsed time = 0.029913535

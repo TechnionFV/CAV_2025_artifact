@@ -10,7 +10,64 @@ This artifact is built on top of a formal verification framework developed by us
 * We request that this artifact be considered for all three badges.
 * Available Badge: The artifact is made available on Zenodo, the DOI is `?`
 * Functional Badge: The artifact documents the steps that need to be taken to reproduce the results in the paper. The documentation includes a dockerfile to retrace the exact steps needed.
-* Reusable Badge: It also provides a dockerfile to run the proof engine as a standalone tool. This allows for checking arbitrary AIGER files and producing proofs and counterexamples. As well as allowing for fine grained control over all parameters mentioned in the paper, as well as some parameters that were not.
+* Reusable Badge: It also provides a dockerfile to run the proof solver as a standalone tool. This allows for checking arbitrary AIGER files and producing proofs and counterexamples. As well as allowing for fine grained control over all parameters mentioned in the paper, as well as some parameters that were not.
+
+
+
+## Artifact Requirements
+
+Reproducing the results in the paper requires running around 950 models with three solvers each for a timeout of one hour.
+Furthermore, running two solvers on the same machine at the same time may result in random noise in performance metrics due to the two processes conflicting in memory cache.
+
+Thus the results we've shown in the paper were ran on 11 machines running in a cluster. Each machine was split into 8 virtual machines where each virtual machine has a dedicated L3 cache. This allows us to run 88 jobs in parallel. It is worth noting that this split was performed in the cluster configuration, and the term virtual machine does not refer to a separate OS in this context.
+
+Each job is a run of an solver on a model, with a timeout provided by `/bin/timeout` (not relying on solver timeouts).
+Each virtual machine had access to 32GB of RAM. Each machine had three non-hyper-threaded cores of AMD EPYC 74F3 CPU.
+
+Since these tests require a long time to run, we also allow the option to run the experiments partially by providing a list of tests or a common phrase in test names one would like to run. Furthermore, we allow either running the experiments one at a time with one single core, utilizing multiple cores on the same machine, or sending the jobs to a [slurm](https://slurm.schedmd.com/overview.html) cluster. 
+
+
+## Structure and Content
+
+
+```bash
+.
+├── README.md               (this file)
+├── LICENSE                 (GPL3 license)
+├── benchmarks_aig          (Benchmark files)
+│   ├── aig_inputs          (AIGER benchmarks)
+│   ├── Dockerfile          (Dockerfile to reproduce hwmcc benchmarks)
+│   └── convert.py          (Script for pre-processing AIG files)
+├── pdrer_crate
+│   ├── Dockerfile          (Dockerfile to run the PDR/PDRER as a standalone tool for proving AIG files)
+│   ├── Cargo.toml          (Rust dependencies file, all open-source)
+│   ├── src                 (Location of PDR and PDER)
+│   └── examples            (Contains the implementation of the main function)
+└── evaluate.sh
+```
+
+For viewing the implementation of our project one can refer to `pdrer_crate` this is a standalone crate (rust's terminology for a library) that includes many of the data-structures required to implement the solver. This library can be compiled using `cargo build` and be used and expanded on outside the scope of this artifact. For viewing the documentation for the library run `cd pdrer_crate ; cargo doc --open` provided you have rust installed.
+
+## Getting Started (Smoke Test)
+
+<!-- Describe how to execute and briefly test your artifact in order to complete the smoke-test phase of the evaluation. Below is an example for Docker images. -->
+
+First make sure docker is running properly by running:
+```
+docker run hello-world
+```
+
+Then check that you are able to run the PDR/PDRER solver by running:
+```
+docker build -t pdr_image pdrer_crate/.
+docker run \
+    -v $(pwd)/benchmarks_aig/aig_inputs:/aig_inputs \
+    pdr_image \
+    -v on \
+    aig_inputs/hwmcc19_fold_fraigy_orchestrate/aig/goel/industry/cal3/cal3.aig
+```
+
+The output of the previous commands should be similar to `expected_results\smoke_test.out`
 
 
 ## Creating HWMCC benchmarks
@@ -39,55 +96,7 @@ Building the docker container requires running the pre-processing step on 959 be
 Furthermore, as part of our paper, we produced our own benchmarks to demonstrate some features of our proposed algorithm, these are also available in `benchmarks_aig/aig_inputs/ER_hwmc_benchmarks`
 
 
-## Artifact Requirements
-
-List resource and time requirements for accessing your artifact.
-
-The artifact 
-
-* Precisely state the resource requirements (RAM, number of cores, CPU frequency, etc.) needed to evaluate your artifact.
-* Provide for each task/step of the evaluation (an estimate of) how long it will take to perform it.
-* If some tasks require a large amount of resources (hardware or time) indicate (and describe in subsequent sections) the possibility to replicate a subset of the results with reasonably modest resource and time limits.
-* Describe the machine used and the runtime achieved during your evaluation.
-
-
-## Structure and Content
-
-
-```bash
-.
-├── README.md               (this file)
-├── LICENSE                 (GPL3 license)
-├── benchmarks_aig          (Benchmark files)
-│   ├── aig_inputs          (AIGER benchmarks)
-│   ├── Dockerfile          (Dockerfile to reproduce hwmcc benchmarks)
-│   └── convert.py          (Script for pre-processing AIG files)
-├── pdrer_crate
-│   ├── Dockerfile          (Dockerfile to run the PDR/PDRER as a standalone tool for proving AIG files)
-│   ├── Cargo.toml          (Rust dependencies file, all open-source)
-│   ├── src                 (Location of PDR and PDER)
-│   └── examples            (Contains the implementation of the main function)
-└── evaluate.sh
-```
-
-
-## Getting Started
-
-Describe how to execute and briefly test your artifact in order to complete the smoke-test phase of the evaluation. Below is an example for Docker images.
-
-First make sure docker is running properly by running:
-```
-docker run hello-world
-```
-
-Then check that you are able to run the PDR/PDRER engine by running:
-```
-docker build -t pdr_image pdrer_crate/.
-docker run --name pdr pdr_image
-```
-
-
-### Getting Started (example)
+<!-- ### Getting Started (example)
 
 First, load the docker image `docker-tool-image` from the .tar archive (docker may require `sudo` root privileges):
 
@@ -122,7 +131,7 @@ All experiments were successful.
 You can exit the container by typing `exit`. Output files generated by the evaluation script (logs, tables, plots, etc.) remain available in `$PWD/output`. Upon finishing your review, you can remove the image from the Docker environment using:
 ```
 docker rmi docker-tool
-```
+``` -->
 
 
 ## Functional badge
