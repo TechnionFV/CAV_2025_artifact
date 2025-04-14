@@ -30,10 +30,11 @@ Since these tests require a long time to run, we also allow the option to run th
 ## Structure and Content
 
 
-```bash
+```
 .
 ├── README.md               (this file)
 ├── LICENSE                 (GPL3 license)
+├── Dockerfile              (Dockerfile to reproduce the results)
 ├── benchmarks_aig          (Benchmark files)
 │   ├── aig_inputs          (AIGER benchmarks)
 │   ├── Dockerfile          (Dockerfile to reproduce hwmcc benchmarks)
@@ -43,7 +44,24 @@ Since these tests require a long time to run, we also allow the option to run th
 │   ├── Cargo.toml          (Rust dependencies file, all open-source)
 │   ├── src                 (Location of PDR and PDER)
 │   └── examples            (Contains the implementation of the main function)
-└── evaluate.sh
+├── expected_results        (Expected results of the smoke test and the experiments)
+└── benchmark-hwmc          (Scripts to run the experiments)
+```
+
+### Description of each folder
+
+* `benchmarks_aig` - contains the AIGER benchmarks and a script to produce them.
+* `pdrer_crate` - contains the PDR/PDRER solver and its dependencies.
+* `experiment_script` - contains the script to run the experiments.
+* `expected_results` - contains the expected results of the smoke test and the experiments.
+
+### Description of each file
+
+* `README.md` - this file
+* `LICENSE` - license file
+* `Dockerfile` - dockerfile to run the PDR/PDRER solver as a standalone tool for proving AIG files
+* `convert.py` - script to produce AIGER benchmarks
+* `experiment_script` - script to run the experiments
 ```
 
 For viewing the implementation of our project one can refer to `pdrer_crate` this is a standalone crate (rust's terminology for a library) that includes many of the data-structures required to implement the solver. This library can be compiled using `cargo build` and be used and expanded on outside the scope of this artifact. For viewing the documentation for the library run `cd pdrer_crate ; cargo doc --open` provided you have rust installed.
