@@ -136,21 +136,21 @@ docker rmi docker-tool
 
 ## Functional badge
 
-If you claim a functional badge for the artifact:
+<!-- If you claim a functional badge for the artifact:
 
 * Document which claims or results of the paper can be replicated with the artifact and how, including how to run the experiments and how to read and interpret the output. To simplify the reviewing process, we recommend providing evaluation scripts (where applicable).
 * Document which claims or results of the paper cannot be replicated and why.
 * Explain how the correctness of the artifact (i.e. the presented tool/method) was tested.
 * If possible, include log files reporting the results that were presented in the paper, and point to their location in the artifact.
-* If possible, include source code within your artifact, and point the reviewer to the parts of the source code that are most relevant to the submitted paper.
+* If possible, include source code within your artifact, and point the reviewer to the parts of the source code that are most relevant to the submitted paper. -->
 
 
 ## Reusable badge
 
-If you claim a reusable badge for the artifact:
+<!-- If you claim a reusable badge for the artifact:
 
 * Make sure your artifact has a license which allows repurposing and reuse, and is easy to use.
 * Make sure that all dependencies and used libraries are well-documented and up to date.
 * Explain in sufficient detail how the artifact can be used beyond the paper.
 * If the artifact is not open source, provide documented interfaces for extensions.
-* Explain how the artifact can be used in a different environment, e.g. built on another system, used outside of the Docker or VM image, etc.
+* Explain how the artifact can be used in a different environment, e.g. built on another system, used outside of the Docker or VM image, etc. -->
