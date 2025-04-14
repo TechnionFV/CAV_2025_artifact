@@ -94,6 +94,8 @@ docker run exp --help
 
 Each experiment produces amongst other things a results CSV file that is available in the path `/usr/src/benchmark-hwmc/results/deployment_0.csv` inside the container.
 
+The directory `expected_results` includes the results we got on all the experiments as a reference.
+
 
 ## Creating HWMCC benchmarks
 
