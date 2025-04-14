@@ -82,11 +82,7 @@ docker run hello-world
 Then check that you are able to run the PDR/PDRER solver by running:
 ```
 docker build -t pdr_image pdrer_crate/.
-docker run \
-    -v $(pwd)/benchmarks_aig/aig_inputs:/aig_inputs \
-    pdr_image \
-    -v on \
-    aig_inputs/hwmcc19_fold_fraigy_orchestrate/aig/goel/industry/cal3/cal3.aig
+docker run -v $(pwd)/benchmarks_aig/aig_inputs:/aig_inputs pdr_image -v on aig_inputs/hwmcc19_fold_fraigy_orchestrate/aig/goel/industry/cal3/cal3.aig
 ```
 
 The output of the previous commands should be similar to `expected_results/smoke_test.out`

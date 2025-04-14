@@ -1,0 +1,84 @@
+
+name: CI
+
+on:
+  push:
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  check-standalone-dockerfile:
+    name: pdrer_crate/Dockerfile
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v3
+      - run: docker build -t pdr_image pdrer_crate/.
+      - run: docker run -v $(pwd)/benchmarks_aig/aig_inputs:/aig_inputs pdr_image -v on aig_inputs/hwmcc19_fold_fraigy_orchestrate/aig/goel/industry/cal3/cal3.aig
+      
+
+  #################################################################################################
+  # test docs job
+  #################################################################################################
+
+  # test-docs:
+  #   name: Test Documentation
+  #   # run only if the previous job succeeded
+  #   # needs: fmt-check-clippy-build
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 5
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: dtolnay/rust-toolchain@stable
+  #     # source https://github.com/dtolnay/syn/blob/master/.github/workflows/ci.yml
+  #     - run: cargo test --all-features --doc
+  #     - run: cargo doc --all-features
+
+  #################################################################################################
+  # test job
+  #################################################################################################
+
+  # test:
+  #   name: Test
+  #   # needs: test-docs
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: dtolnay/rust-toolchain@stable
+  #     - run: cargo test --verbose
+
+  #################################################################################################
+  # Miri job
+  #################################################################################################
+
+  # miri:
+  #   name: Miri
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 20
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     # source https://github.com/dtolnay/anyhow/blob/master/.github/workflows/ci.yml
+  #     - uses: dtolnay/rust-toolchain@miri
+  #     - run: cargo miri setup
+  #     - run: cargo miri test --test miri
+  #       env:
+  #         MIRIFLAGS: -Zmiri-strict-provenance
+
+  #################################################################################################
+  # Windows job
+  #################################################################################################
+
+  # windows:
+  #   name: Windows
+  #   needs: test
+  #   runs-on: windows-latest
+  #   timeout-minutes: 10
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: dtolnay/rust-toolchain@stable
+  #     - run: cargo test --verbose
