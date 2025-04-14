@@ -52,10 +52,14 @@ For viewing the implementation of our project one can refer to `pdrer_crate` thi
 
 <!-- Describe how to execute and briefly test your artifact in order to complete the smoke-test phase of the evaluation. Below is an example for Docker images. -->
 
+### Step 1
+
 First make sure docker is running properly by running:
 ```
 docker run hello-world
 ```
+
+### Step 2
 
 Then check that you are able to run the PDR/PDRER solver by running:
 ```
@@ -68,6 +72,27 @@ docker run \
 ```
 
 The output of the previous commands should be similar to `expected_results/smoke_test.out`
+
+### Step 3
+
+Running a small experiment, first build the container:
+```
+docker build -t exp .
+```
+
+Now run a small subset of the `hwmcc19_fold_fraigy_orchestrate` test suit
+```
+docker run exp --local -c 1 -d 18 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
+```
+
+This will take the tests in `hwmcc19_fold_fraigy_orchestrate` that contain the word `vis` in their path, and will run one after the other (single core `-c 1`) locally (`--local`), the prover that we are using is defined by the deployment number (`-d 18`) you can refer to the 
+
+You can see more information regarding the experimentation script by running:
+```
+docker run exp --help
+```
+
+Each experiment produces amongst other things a results CSV file that is available in the path `/usr/src/benchmark-hwmc/results/deployment_0.csv` inside the container.
 
 
 ## Creating HWMCC benchmarks

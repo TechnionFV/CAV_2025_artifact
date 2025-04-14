@@ -6,6 +6,7 @@ RUN apt-get update -y
 RUN apt-get install -y libx11-dev
 RUN apt-get install -y python3-tk
 RUN apt-get install -y python3-matplotlib
+RUN apt-get install -y time
 
 WORKDIR /usr/src/benchmark-hwmc
 

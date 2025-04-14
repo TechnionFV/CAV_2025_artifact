@@ -1,0 +1,318 @@
+model,Time/Error,Result,Clauses,Variables,Literals,Memory (kB),Depth,InvariantSize
+0_adding.5.prop1-func-interl.aig.out.txt,3.41,SAT,1058.0,276.0,3170.0,44968.0,16,-inf
+100_arbitrated_top_n3_w8_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,47433.0,17759.0,127519.0,527624.0,33,inf
+101_arbitrated_top_n4_w128_d16_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,111819.0,43587.0,301876.0,490872.0,17,inf
+102_arbitrated_top_n4_w32_d16_e0.aig.out.txt,325.19,SAT,29836.0,11523.0,80598.0,146572.0,18,-inf
+103_arbitrated_top_n4_w64_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,437000.0,167768.0,1176587.0,786996.0,12,inf
+104_arbitrated_top_n5_w128_d16_e0.aig.out.txt,2527.44,SAT,139542.0,54397.0,376829.0,543844.0,17,-inf
+105_arbitrated_top_n5_w128_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,274204.0,106087.0,739284.0,852548.0,14,inf
+106_arbitrated_top_n5_w16_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,145569.0,55234.0,391675.0,585020.0,33,inf
+107_arbitrated_top_n5_w16_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,38342.0,14582.0,103380.0,505596.0,25,inf
+108_arbitrated_top_n5_w32_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,72043.0,27655.0,194241.0,415892.0,18,inf
+109_arbitrated_top_n5_w64_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,546155.0,209650.0,1470553.0,948968.0,13,inf
+10_pgm_protocol.2.prop5-back-serstep.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,39117.0,11051.0,114321.0,447860.0,13,inf
+110_arbitrated_top_n5_w64_d64_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,275196.0,105806.0,741335.0,641348.0,16,inf
+111_arbitrated_top_n5_w8_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,78796.0,29498.0,211836.0,456024.0,26,inf
+112_arbitrated_top_n5_w8_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,21506.0,8046.0,57990.0,543656.0,31,inf
+113_circular_pointer_top_w128_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,235492.0,84248.0,688725.0,563216.0,6,inf
+114_circular_pointer_top_w16_d16_e0.aig.out.txt,112.74,SAT,4764.0,1719.0,13772.0,103056.0,19,-inf
+115_circular_pointer_top_w16_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,8639.0,3094.0,24979.0,598868.0,30,inf
+116_circular_pointer_top_w16_d64_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,16307.0,5815.0,47191.0,729040.0,35,inf
+117_circular_pointer_top_w32_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,60676.0,21656.0,176661.0,561592.0,23,inf
+118_circular_pointer_top_w32_d16_e0.aig.out.txt,463.88,SAT,8812.0,3191.0,25644.0,174324.0,19,-inf
+119_circular_pointer_top_w32_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,16271.0,5846.0,47347.0,580132.0,27,inf
+11_pgm_protocol.4.prop2-func-interl.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,27377.0,7373.0,79390.0,456312.0,14,inf
+120_circular_pointer_top_w64_d64_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,60707.0,21751.0,177271.0,547996.0,19,inf
+121_circular_pointer_top_w8_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,16972.0,6008.0,48645.0,707068.0,36,inf
+122_circular_pointer_top_w8_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,4823.0,1718.0,13795.0,662504.0,30,inf
+123_circular_pointer_top_w8_d64_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,8907.0,3159.0,25511.0,788040.0,44,inf
+124_shift_register_top_w128_d32_e0.aig.out.txt,393.03,SAT,67823.0,22339.0,199190.0,241592.0,33,-inf
+125_shift_register_top_w128_d64_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,135991.0,44192.0,399438.0,833056.0,44,inf
+126_shift_register_top_w32_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,84035.0,25314.0,247118.0,1328028.0,73,inf
+127_shift_register_top_w32_d8_e0.aig.out.txt,0.6,SAT,4474.0,1577.0,13100.0,34204.0,10,-inf
+128_shift_register_top_w64_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,166051.0,50049.0,488983.0,975872.0,55,inf
+129_shift_register_top_w64_d16_e0.aig.out.txt,15.79,SAT,16749.0,5707.0,49113.0,69372.0,18,-inf
+12_rether.4.prop1-back-serstep.aig.out.txt,2.25,SAT,12028.0,3636.0,33339.0,53432.0,15,-inf
+130_shift_register_top_w64_d32_e0.aig.out.txt,129.61,SAT,34223.0,11267.0,100437.0,165424.0,34,-inf
+131_shift_register_top_w64_d64_e0.aig.out.txt,1790.14,SAT,68471.0,22240.0,200973.0,662476.0,67,-inf
+132_shift_register_top_w64_d8_e0.aig.out.txt,1.65,SAT,8634.0,3049.0,25324.0,38436.0,10,-inf
+133_shift_register_top_w8_d128_e0.aig.out.txt,2439.77,SAT,22524.0,6762.0,65729.0,1542836.0,131,-inf
+134_shift_register_top_w8_d32_e0.aig.out.txt,7.52,SAT,4823.0,1580.0,14023.0,88192.0,34,-inf
+135_shift_register_top_w8_d64_e0.aig.out.txt,92.43,SAT,9433.0,3042.0,27435.0,246480.0,68,-inf
+136_analog_estimation_convergence.aig.out.txt,0.19,UN_SAT,1931.0,603.0,5125.0,51004.0,20,39.0
+137_ridecore.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,509346.0,140117.0,1494960.0,966912.0,10,inf
+138_intersymbol_analog_estimation_convergence.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,10331.0,3103.0,27583.0,249760.0,13,inf
+139_zipcpu-busdelay-p02.aig.out.txt,160.3,UN_SAT,1348.0,888.0,3810.0,182388.0,40,13805.0
+13_synapse.7.prop1-func-interl.aig.out.txt,102.33,UN_SAT,11464.0,3008.0,32392.0,143756.0,36,2903.0
+140_zipcpu-busdelay-p18.aig.out.txt,0.08,UN_SAT,1378.0,897.0,3898.0,35284.0,11,57.0
+141_zipcpu-busdelay-p24.aig.out.txt,99.04,UN_SAT,1384.0,898.0,3923.0,145852.0,36,10418.0
+142_zipcpu-busdelay-p30.aig.out.txt,181.31,UN_SAT,1364.0,890.0,3868.0,188232.0,41,14986.0
+143_zipcpu-busdelay-p36.aig.out.txt,55.3,UN_SAT,1378.0,896.0,3908.0,111480.0,31,8150.0
+144_zipcpu-busdelay-p43.aig.out.txt,0.12,UN_SAT,1449.0,919.0,4099.0,30380.0,8,72.0
+145_zipcpu-busdelay-p46.aig.out.txt,15.47,UN_SAT,1364.0,890.0,3867.0,79952.0,26,3310.0
+146_zipcpu-busdelay-p47.aig.out.txt,1.08,UN_SAT,1338.0,883.0,3795.0,51012.0,19,338.0
+147_VexRiscv-regch0-20-p0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,30540.0,11228.0,87933.0,885836.0,20,inf
+148_VexRiscv-regch0-20-p1.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,30204.0,11100.0,87081.0,873904.0,20,inf
+149_VexRiscv-regch0-30-p1.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,30202.0,11106.0,87061.0,1276084.0,30,inf
+14_telephony.6.prop1-func-interl.aig.out.txt,11.91,SAT,6692.0,1838.0,18760.0,39112.0,9,-inf
+150_picorv32-check-p01.aig.out.txt,0.12,UN_SAT,28812.0,10243.0,83930.0,42976.0,9,39.0
+151_picorv32-check-p06.aig.out.txt,0.13,UN_SAT,28811.0,10241.0,83940.0,45052.0,10,56.0
+152_picorv32-check-p09.aig.out.txt,0.09,UN_SAT,28806.0,10240.0,83923.0,35576.0,5,7.0
+153_picorv32-check-p12.aig.out.txt,0.14,UN_SAT,28815.0,10243.0,83946.0,46904.0,11,58.0
+154_picorv32-check-p17.aig.out.txt,0.09,UN_SAT,29665.0,10497.0,86395.0,34428.0,4,71.0
+155_picorv32-check-p18.aig.out.txt,0.12,UN_SAT,28955.0,10281.0,84341.0,44732.0,10,58.0
+156_picorv32-check-p22.aig.out.txt,0.18,UN_SAT,28811.0,10242.0,83936.0,48148.0,12,76.0
+157_picorv32-pcregs-p2.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,38904.0,12925.0,112740.0,423828.0,6,inf
+158_ponylink-slaveTXlen-sat.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,39754.0,14395.0,113480.0,3038880.0,168,inf
+159_zipcpu-busdelay-p20.aig.out.txt,0.55,UN_SAT,1529.0,932.0,4342.0,50700.0,19,274.0
+15_toy_lock_4.aig.out.txt,187.69,UN_SAT,1969.0,522.0,5775.0,83304.0,10,25752.0
+160_zipcpu-busdelay-p24.aig.out.txt,98.71,UN_SAT,1384.0,898.0,3923.0,146152.0,36,10418.0
+161_zipcpu-busdelay-p30.aig.out.txt,182.52,UN_SAT,1364.0,890.0,3868.0,188624.0,41,14986.0
+162_zipcpu-busdelay-p36.aig.out.txt,54.53,UN_SAT,1378.0,896.0,3908.0,111704.0,31,8150.0
+163_zipcpu-busdelay-p42.aig.out.txt,0.58,UN_SAT,1381.0,898.0,3903.0,47948.0,18,237.0
+164_zipcpu-busdelay-p43.aig.out.txt,0.12,UN_SAT,1449.0,919.0,4099.0,29960.0,8,72.0
+165_zipcpu-busdelay-p45.aig.out.txt,1.74,UN_SAT,1353.0,886.0,3843.0,51352.0,19,351.0
+166_zipcpu-busdelay-p46.aig.out.txt,15.44,UN_SAT,1364.0,890.0,3867.0,79900.0,26,3310.0
+167_zipcpu-busdelay-p47.aig.out.txt,1.1,UN_SAT,1338.0,883.0,3795.0,50920.0,19,338.0
+168_zipcpu-pfcache-p05.aig.out.txt,0.37,UN_SAT,5414.0,4652.0,15257.0,54236.0,19,136.0
+169_zipcpu-pfcache-p13.aig.out.txt,0.17,UN_SAT,33402.0,13148.0,95422.0,46296.0,9,53.0
+16_cal10.aig.out.txt,0.03,UN_SAT,797.0,255.0,2288.0,22368.0,4,17.0
+170_zipcpu-pfcache-p15.aig.out.txt,0.1,UN_SAT,5461.0,4668.0,15381.0,35436.0,9,47.0
+171_zipcpu-pfcache-p16.aig.out.txt,2.06,UN_SAT,5432.0,4658.0,15308.0,58720.0,20,208.0
+172_zipcpu-pfcache-p19.aig.out.txt,0.21,UN_SAT,5425.0,4654.0,15296.0,53588.0,19,90.0
+173_zipcpu-pfcache-p20.aig.out.txt,0.16,UN_SAT,6115.0,4872.0,17255.0,34748.0,8,113.0
+174_zipcpu-pfcache-p25.aig.out.txt,1.07,UN_SAT,6509.0,5012.0,18293.0,47140.0,13,649.0
+175_zipcpu-zipmmu-p00.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,4589.0,2148.0,13367.0,322772.0,3,inf
+176_zipcpu-zipmmu-p10.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,4583.0,2144.0,13364.0,555876.0,6,inf
+177_zipcpu-zipmmu-p14.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,4593.0,2148.0,13383.0,360452.0,4,inf
+178_zipcpu-zipmmu-p24.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,4621.0,2158.0,13456.0,427232.0,6,inf
+179_zipcpu-zipmmu-p26.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,4725.0,2177.0,13775.0,422972.0,4,inf
+17_cal100.aig.out.txt,10.01,UN_SAT,31260.0,9256.0,89397.0,57532.0,8,847.0
+180_zipcpu-zipmmu-p32.aig.out.txt,0.03,UN_SAT,4604.0,2147.0,13422.0,21120.0,2,34.0
+181_zipcpu-zipmmu-p38.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,4613.0,2152.0,13444.0,287032.0,4,inf
+182_zipcpu-zipmmu-p39.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,6410.0,2698.0,18615.0,463416.0,6,inf
+183_picorv32_mutAX_nomem-p4.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69703.0,21188.0,202206.0,532564.0,7,inf
+184_picorv32_mutAX_nomem-p8.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,71213.0,21594.0,206746.0,965808.0,9,inf
+185_picorv32_mutAY_nomem-p4.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69268.0,21035.0,201295.0,1033848.0,9,inf
+186_picorv32_mutAY_nomem-p7.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69301.0,21043.0,201377.0,625404.0,7,inf
+187_picorv32_mutAY_nomem-p8.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,70783.0,21439.0,205854.0,992508.0,9,inf
+188_picorv32_mutBX_nomem-p0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,70087.0,21298.0,203433.0,586952.0,7,inf
+189_picorv32_mutBX_nomem-p1.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,70016.0,21280.0,203227.0,668512.0,7,inf
+18_cal109.aig.out.txt,57.53,UN_SAT,31803.0,9404.0,90744.0,78760.0,8,891.0
+190_picorv32_mutBX_nomem-p3.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69952.0,21265.0,203012.0,647536.0,7,inf
+191_picorv32_mutBX_nomem-p7.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69752.0,21207.0,202424.0,512832.0,7,inf
+192_picorv32_mutBX_nomem-p8.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,71211.0,21596.0,206842.0,952896.0,9,inf
+193_picorv32_mutBY_nomem-p8.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,70770.0,21436.0,205813.0,1007812.0,9,inf
+194_picorv32_mutCX_nomem-p3.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69955.0,21265.0,203026.0,649076.0,7,inf
+195_picorv32_mutCX_nomem-p4.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69709.0,21194.0,202318.0,597356.0,7,inf
+196_picorv32_mutCX_nomem-p7.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69756.0,21208.0,202437.0,637752.0,7,inf
+197_picorv32_mutCX_nomem-p8.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,71216.0,21597.0,206858.0,1086048.0,9,inf
+198_picorv32_mutCY_nomem-p4.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69257.0,21032.0,201264.0,938952.0,9,inf
+199_picorv32_mutCY_nomem-p5.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,69497.0,21095.0,201938.0,1236772.0,9,inf
+19_cal110.aig.out.txt,48.47,UN_SAT,31714.0,9359.0,90649.0,71492.0,7,928.0
+1_brp.2.prop1-func-interl.aig.out.txt,0.81,SAT,1767.0,529.0,4920.0,45304.0,17,-inf
+200_picorv32_mutCY_nomem-p8.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,70773.0,21437.0,205823.0,656092.0,7,inf
+201_marlann_compute_cp_fail1-p2.aig.out.txt,0.09,UN_SAT,864.0,2089.0,2347.0,37652.0,12,252.0
+202_marlann_compute_cp_fail2-p0.aig.out.txt,0.12,UN_SAT,9288.0,4657.0,25660.0,38948.0,11,91.0
+203_marlann_compute_cp_pass-p2.aig.out.txt,0.09,UN_SAT,860.0,2088.0,2336.0,35768.0,11,251.0
+204_dspfilters_fastfir_second-p04.aig.out.txt,15.53,UN_SAT,38948.0,11508.0,119664.0,76500.0,13,445.0
+205_dspfilters_fastfir_second-p07.aig.out.txt,51.35,UN_SAT,38977.0,11505.0,119805.0,106432.0,20,1495.0
+206_dspfilters_fastfir_second-p08.aig.out.txt,1243.86,UN_SAT,39078.0,11544.0,120014.0,266008.0,32,17010.0
+207_dspfilters_fastfir_second-p09.aig.out.txt,217.97,UN_SAT,38996.0,11520.0,119838.0,147808.0,25,4139.0
+208_dspfilters_fastfir_second-p15.aig.out.txt,725.71,UN_SAT,39075.0,11542.0,120015.0,207720.0,28,10876.0
+209_dspfilters_fastfir_second-p16.aig.out.txt,59.06,UN_SAT,39065.0,11540.0,119984.0,112092.0,20,3171.0
+20_cal122.aig.out.txt,9.12,UN_SAT,31004.0,9201.0,88612.0,53608.0,7,742.0
+210_dspfilters_fastfir_second-p17.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,39018.0,11536.0,119839.0,362296.0,22,inf
+211_dspfilters_fastfir_second-p20.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,35743.0,10773.0,110051.0,352104.0,31,inf
+212_dspfilters_fastfir_second-p21.aig.out.txt,10.44,UN_SAT,39071.0,11544.0,119976.0,71664.0,12,643.0
+213_dspfilters_fastfir_second-p22.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,39020.0,11528.0,119888.0,268484.0,16,inf
+214_dspfilters_fastfir_second-p26.aig.out.txt,2924.17,UN_SAT,39009.0,11519.0,119890.0,323080.0,29,16032.0
+215_dspfilters_fastfir_second-p28.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,35603.0,10728.0,109701.0,286832.0,18,inf
+216_dspfilters_fastfir_second-p29.aig.out.txt,2150.96,UN_SAT,39085.0,11549.0,120020.0,308036.0,31,17514.0
+217_dspfilters_fastfir_second-p30.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,38932.0,11513.0,119607.0,355908.0,17,inf
+218_dspfilters_fastfir_second-p32.aig.out.txt,422.27,UN_SAT,38961.0,11499.0,119781.0,172252.0,25,6735.0
+219_dspfilters_fastfir_second-p40.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,39026.0,11528.0,119901.0,344632.0,27,inf
+21_cal128.aig.out.txt,11.58,UN_SAT,31128.0,9224.0,88951.0,54644.0,7,714.0
+220_dspfilters_fastfir_second-p45.aig.out.txt,1888.93,UN_SAT,39011.0,11517.0,119889.0,298052.0,32,12561.0
+221_qspiflash_dualflexpress_divfive-p004.aig.out.txt,544.28,UN_SAT,2067.0,961.0,5961.0,576736.0,131,4963.0
+222_qspiflash_dualflexpress_divfive-p007.aig.out.txt,1080.11,UN_SAT,2082.0,962.0,6029.0,1385424.0,213,5778.0
+223_qspiflash_dualflexpress_divfive-p012.aig.out.txt,203.22,UN_SAT,2005.0,944.0,5804.0,340904.0,116,3286.0
+224_qspiflash_dualflexpress_divfive-p017.aig.out.txt,0.03,UN_SAT,2002.0,943.0,5795.0,22812.0,4,5.0
+225_qspiflash_dualflexpress_divfive-p018.aig.out.txt,0.03,UN_SAT,2017.0,948.0,5827.0,24564.0,5,12.0
+226_qspiflash_dualflexpress_divfive-p036.aig.out.txt,0.29,UN_SAT,2022.0,950.0,5840.0,39892.0,13,112.0
+227_qspiflash_dualflexpress_divfive-p053.aig.out.txt,7.15,UN_SAT,2047.0,959.0,5904.0,88968.0,34,331.0
+228_qspiflash_dualflexpress_divfive-p054.aig.out.txt,11.74,UN_SAT,2086.0,970.0,6025.0,120996.0,53,419.0
+229_qspiflash_dualflexpress_divfive-p057.aig.out.txt,8.95,UN_SAT,2086.0,970.0,6025.0,96732.0,40,691.0
+22_cal131.aig.out.txt,8.96,UN_SAT,31199.0,9206.0,89416.0,57784.0,8,587.0
+230_qspiflash_dualflexpress_divfive-p059.aig.out.txt,18.91,UN_SAT,2295.0,1032.0,6600.0,449584.0,224,1551.0
+231_qspiflash_dualflexpress_divfive-p060.aig.out.txt,0.16,UN_SAT,2052.0,959.0,5923.0,60076.0,25,121.0
+232_qspiflash_dualflexpress_divfive-p070.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,2298.0,1033.0,6609.0,1630396.0,133,inf
+233_qspiflash_dualflexpress_divfive-p076.aig.out.txt,1.58,UN_SAT,2123.0,980.0,6120.0,104396.0,48,297.0
+234_qspiflash_dualflexpress_divfive-p082.aig.out.txt,49.81,UN_SAT,2076.0,966.0,5993.0,153348.0,54,900.0
+235_qspiflash_dualflexpress_divfive-p091.aig.out.txt,13.34,UN_SAT,2302.0,1035.0,6617.0,417348.0,208,1241.0
+236_qspiflash_dualflexpress_divfive-p093.aig.out.txt,75.04,UN_SAT,2103.0,975.0,6068.0,241104.0,86,1178.0
+237_qspiflash_dualflexpress_divfive-p098.aig.out.txt,0.09,UN_SAT,2086.0,970.0,6025.0,35316.0,11,55.0
+238_qspiflash_dualflexpress_divfive-p104.aig.out.txt,197.98,UN_SAT,2297.0,1033.0,6606.0,630952.0,212,1718.0
+239_qspiflash_dualflexpress_divfive-p112.aig.out.txt,0.53,UN_SAT,2084.0,969.0,6011.0,105664.0,50,161.0
+23_cal132.aig.out.txt,10.77,UN_SAT,31228.0,9221.0,89411.0,58508.0,8,654.0
+240_qspiflash_dualflexpress_divfive-p120.aig.out.txt,0.35,UN_SAT,2141.0,986.0,6168.0,135420.0,68,119.0
+241_qspiflash_dualflexpress_divfive-p127.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,2298.0,1035.0,6605.0,1231888.0,103,inf
+242_qspiflash_dualflexpress_divfive-p133.aig.out.txt,7.16,UN_SAT,2072.0,965.0,5984.0,83968.0,33,375.0
+243_qspiflash_dualflexpress_divfive-p137.aig.out.txt,3.82,UN_SAT,2066.0,963.0,5965.0,63980.0,23,250.0
+244_qspiflash_dualflexpress_divfive-p139.aig.out.txt,0.24,UN_SAT,2064.0,963.0,5959.0,35740.0,11,74.0
+245_qspiflash_dualflexpress_divfive-p142.aig.out.txt,0.03,UN_SAT,2010.0,944.0,5813.0,23124.0,4,5.0
+246_qspiflash_dualflexpress_divfive-p154.aig.out.txt,3.82,UN_SAT,2056.0,962.0,5930.0,78368.0,32,280.0
+247_qspiflash_dualflexpress_divfive-p157.aig.out.txt,545.21,UN_SAT,2297.0,1033.0,6606.0,562100.0,163,2250.0
+248_qspiflash_dualflexpress_divfive-p163.aig.out.txt,452.02,UN_SAT,2295.0,1032.0,6602.0,643904.0,200,2021.0
+249_qspiflash_dualflexpress_divthree-p004.aig.out.txt,89.26,UN_SAT,2050.0,957.0,5914.0,290328.0,99,2914.0
+24_cal134.aig.out.txt,10.41,UN_SAT,31937.0,9432.0,91223.0,58756.0,8,644.0
+250_qspiflash_dualflexpress_divthree-p011.aig.out.txt,26.25,UN_SAT,2067.0,959.0,5976.0,179368.0,71,1739.0
+251_qspiflash_dualflexpress_divthree-p029.aig.out.txt,0.04,UN_SAT,1990.0,939.0,5761.0,26724.0,6,24.0
+252_qspiflash_dualflexpress_divthree-p030.aig.out.txt,10.78,UN_SAT,2280.0,1029.0,6559.0,306480.0,147,1135.0
+253_qspiflash_dualflexpress_divthree-p048.aig.out.txt,3.36,UN_SAT,2041.0,959.0,5885.0,62904.0,24,248.0
+254_qspiflash_dualflexpress_divthree-p071.aig.out.txt,0.06,UN_SAT,1994.0,941.0,5765.0,33796.0,10,42.0
+255_qspiflash_dualflexpress_divthree-p077.aig.out.txt,0.04,UN_SAT,2013.0,948.0,5813.0,30048.0,8,24.0
+256_qspiflash_dualflexpress_divthree-p078.aig.out.txt,0.09,UN_SAT,2040.0,956.0,5899.0,35632.0,11,79.0
+257_qspiflash_dualflexpress_divthree-p081.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,2283.0,1030.0,6566.0,988164.0,84,inf
+258_qspiflash_dualflexpress_divthree-p084.aig.out.txt,243.09,UN_SAT,2354.0,1059.0,6767.0,855384.0,251,4513.0
+259_qspiflash_dualflexpress_divthree-p086.aig.out.txt,0.05,UN_SAT,2022.0,951.0,5842.0,30036.0,8,44.0
+25_cal136.aig.out.txt,10.69,UN_SAT,31822.0,9430.0,90858.0,59140.0,8,649.0
+260_qspiflash_dualflexpress_divthree-p089.aig.out.txt,0.56,UN_SAT,2054.0,962.0,5934.0,36532.0,11,292.0
+261_qspiflash_dualflexpress_divthree-p094.aig.out.txt,25.59,UN_SAT,2469.0,1102.0,7081.0,290716.0,125,1550.0
+262_qspiflash_dualflexpress_divthree-p099.aig.out.txt,6.44,UN_SAT,2318.0,1037.0,6699.0,76112.0,30,836.0
+263_qspiflash_dualflexpress_divthree-p101.aig.out.txt,0.52,UN_SAT,2078.0,968.0,5991.0,54276.0,21,240.0
+264_qspiflash_dualflexpress_divthree-p107.aig.out.txt,27.67,UN_SAT,2340.0,1044.0,6766.0,113520.0,37,2508.0
+265_qspiflash_dualflexpress_divthree-p112.aig.out.txt,0.41,UN_SAT,2067.0,965.0,5965.0,77044.0,34,169.0
+266_qspiflash_dualflexpress_divthree-p119.aig.out.txt,2.4,UN_SAT,2047.0,959.0,5911.0,75260.0,31,376.0
+267_qspiflash_dualflexpress_divthree-p121.aig.out.txt,30.93,UN_SAT,2278.0,1028.0,6555.0,288736.0,136,1509.0
+268_qspiflash_dualflexpress_divthree-p131.aig.out.txt,1.78,UN_SAT,2053.0,960.0,5934.0,56560.0,21,340.0
+269_qspiflash_dualflexpress_divthree-p137.aig.out.txt,0.99,UN_SAT,2056.0,961.0,5938.0,44408.0,15,296.0
+26_cal140.aig.out.txt,5.67,UN_SAT,30691.0,9077.0,87888.0,52940.0,8,538.0
+270_qspiflash_dualflexpress_divthree-p138.aig.out.txt,12.9,UN_SAT,2284.0,1031.0,6567.0,281976.0,136,1238.0
+271_qspiflash_dualflexpress_divthree-p150.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,2281.0,1029.0,6562.0,854560.0,75,inf
+272_qspiflash_dualflexpress_divthree-p159.aig.out.txt,0.22,UN_SAT,2070.0,966.0,5971.0,64028.0,27,134.0
+273_qspiflash_dualflexpress_divthree-p163.aig.out.txt,417.93,UN_SAT,2278.0,1028.0,6555.0,400712.0,104,3504.0
+274_qspiflash_qflexpress_divfive-p005.aig.out.txt,20.94,UN_SAT,1937.0,890.0,5607.0,247408.0,112,1091.0
+275_qspiflash_qflexpress_divfive-p008.aig.out.txt,18.88,UN_SAT,1930.0,887.0,5588.0,221900.0,98,933.0
+276_qspiflash_qflexpress_divfive-p023.aig.out.txt,0.03,UN_SAT,1921.0,885.0,5563.0,23060.0,4,15.0
+277_qspiflash_qflexpress_divfive-p032.aig.out.txt,0.2,UN_SAT,1939.0,891.0,5609.0,46584.0,17,101.0
+278_qspiflash_qflexpress_divfive-p034.aig.out.txt,0.2,UN_SAT,1939.0,891.0,5609.0,44616.0,16,96.0
+279_qspiflash_qflexpress_divfive-p047.aig.out.txt,0.83,UN_SAT,1943.0,893.0,5616.0,53456.0,20,181.0
+27_cal142.aig.out.txt,5.74,UN_SAT,30782.0,9155.0,87903.0,54004.0,8,505.0
+280_qspiflash_qflexpress_divfive-p051.aig.out.txt,0.44,UN_SAT,1943.0,893.0,5616.0,52316.0,20,204.0
+281_qspiflash_qflexpress_divfive-p056.aig.out.txt,0.04,UN_SAT,1919.0,882.0,5567.0,28380.0,7,9.0
+282_qspiflash_qflexpress_divfive-p057.aig.out.txt,0.03,UN_SAT,1917.0,882.0,5556.0,23132.0,4,4.0
+283_qspiflash_qflexpress_divfive-p058.aig.out.txt,1.88,UN_SAT,1969.0,901.0,5694.0,99472.0,44,491.0
+284_qspiflash_qflexpress_divfive-p059.aig.out.txt,0.15,UN_SAT,1987.0,906.0,5744.0,70612.0,31,85.0
+285_qspiflash_qflexpress_divfive-p064.aig.out.txt,0.25,UN_SAT,1971.0,900.0,5696.0,46588.0,17,153.0
+286_qspiflash_qflexpress_divfive-p072.aig.out.txt,0.4,UN_SAT,1948.0,894.0,5631.0,48276.0,18,182.0
+287_qspiflash_qflexpress_divfive-p077.aig.out.txt,0.33,UN_SAT,1985.0,904.0,5740.0,97748.0,46,186.0
+288_qspiflash_qflexpress_divfive-p080.aig.out.txt,0.92,UN_SAT,1991.0,907.0,5753.0,113472.0,54,312.0
+289_qspiflash_qflexpress_divfive-p112.aig.out.txt,0.42,UN_SAT,2022.0,915.0,5865.0,41572.0,14,233.0
+28_cal143.aig.out.txt,6.68,UN_SAT,31263.0,9269.0,89289.0,55580.0,8,577.0
+290_qspiflash_qflexpress_divfive-p113.aig.out.txt,0.53,UN_SAT,2044.0,921.0,5903.0,56460.0,22,161.0
+291_qspiflash_qflexpress_divfive-p120.aig.out.txt,52.27,UN_SAT,2081.0,933.0,6008.0,270144.0,110,1475.0
+292_qspiflash_qflexpress_divfive-p122.aig.out.txt,0.04,UN_SAT,1913.0,881.0,5544.0,28592.0,7,28.0
+293_qspiflash_qflexpress_divfive-p128.aig.out.txt,9.93,UN_SAT,2081.0,933.0,6008.0,233604.0,115,721.0
+294_vgasim_imgfifo-p039.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,6497.0,2635.0,18484.0,981724.0,45,inf
+295_vgasim_imgfifo-p047.aig.out.txt,0.04,UN_SAT,5984.0,2493.0,17015.0,26948.0,5,18.0
+296_vgasim_imgfifo-p051.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,5959.0,2484.0,16948.0,1090236.0,78,inf
+297_vgasim_imgfifo-p058.aig.out.txt,0.26,UN_SAT,6020.0,2494.0,17133.0,92728.0,40,58.0
+298_vgasim_imgfifo-p066.aig.out.txt,0.12,UN_SAT,6012.0,2494.0,17124.0,62184.0,24,28.0
+299_vgasim_imgfifo-p070.aig.out.txt,ERROR,,6073.0,2504.0,17343.0,11626524.0,4595,inf
+29_cal144.aig.out.txt,9.29,UN_SAT,31209.0,9271.0,89061.0,58540.0,8,599.0
+2_cambridge.7.prop2-back-serstep.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,28930.0,7825.0,84455.0,288788.0,5,inf
+300_vgasim_imgfifo-p085.aig.out.txt,0.08,UN_SAT,6012.0,2494.0,17122.0,41920.0,13,26.0
+301_vgasim_imgfifo-p088.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,6096.0,2516.0,17366.0,1046292.0,42,inf
+302_vgasim_imgfifo-p091.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,6063.0,2518.0,17212.0,605616.0,24,inf
+303_vgasim_imgfifo-p093.aig.out.txt,0.26,UN_SAT,6020.0,2494.0,17133.0,94048.0,41,62.0
+304_vgasim_imgfifo-p099.aig.out.txt,2.29,UN_SAT,6308.0,2598.0,17905.0,45268.0,13,805.0
+305_vgasim_imgfifo-p105.aig.out.txt,0.29,UN_SAT,6032.0,2502.0,17161.0,35720.0,9,169.0
+306_vgasim_imgfifo-p107.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,6015.0,2494.0,17142.0,873452.0,45,inf
+307_vgasim_imgfifo-p109.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,6073.0,2504.0,17343.0,6972872.0,1519,inf
+308_vgasim_imgfifo-p111.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,6063.0,2516.0,17225.0,1074996.0,62,inf
+309_zipversa_composecrc_prf-p03.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,2448.0,1068.0,7290.0,178556.0,6,inf
+30_cal146.aig.out.txt,7.93,UN_SAT,31400.0,9273.0,89893.0,57436.0,8,584.0
+310_zipversa_composecrc_prf-p04.aig.out.txt,0.04,UN_SAT,2483.0,1075.0,7377.0,29752.0,8,19.0
+311_zipversa_composecrc_prf-p06.aig.out.txt,0.04,UN_SAT,2842.0,1189.0,8413.0,23960.0,4,68.0
+312_zipversa_composecrc_prf-p11.aig.out.txt,0.03,UN_SAT,2427.0,1062.0,7235.0,21528.0,3,1.0
+313_zipversa_composecrc_prf-p15.aig.out.txt,0.04,UN_SAT,2428.0,1062.0,7238.0,34952.0,11,28.0
+314_zipversa_composecrc_prf-p20.aig.out.txt,0.04,UN_SAT,2428.0,1062.0,7238.0,31712.0,9,31.0
+315_zipversa_composecrc_prf-p21.aig.out.txt,0.04,UN_SAT,2432.0,1063.0,7250.0,29720.0,8,25.0
+316_zipversa_composecrc_prf-p23.aig.out.txt,0.05,UN_SAT,2807.0,1193.0,8228.0,24156.0,4,94.0
+31_cal156.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,129342.0,36182.0,359642.0,89476.0,1,inf
+32_cal162.aig.out.txt,0.12,UN_SAT,60683.0,17408.0,168064.0,34596.0,3,8.0
+33_cal163.aig.out.txt,0.12,UN_SAT,60707.0,17416.0,168128.0,34684.0,3,8.0
+34_cal165.aig.out.txt,0.12,UN_SAT,60703.0,17414.0,168118.0,34736.0,3,8.0
+35_cal180.aig.out.txt,0.11,UN_SAT,1202.0,459.0,3372.0,26152.0,6,42.0
+36_cal182.aig.out.txt,0.27,UN_SAT,131446.0,40442.0,374804.0,66016.0,6,35.0
+37_cal198.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,129063.0,36114.0,358867.0,87064.0,1,inf
+38_cal203.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,129288.0,36231.0,359481.0,91124.0,1,inf
+39_cal21.aig.out.txt,0.02,UN_SAT,843.0,268.0,2436.0,20524.0,3,20.0
+3_collision.6.prop1-func-interl.aig.out.txt,18.45,UN_SAT,8727.0,2398.0,24548.0,76172.0,24,546.0
+40_cal222.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,132672.0,40881.0,378359.0,153092.0,4,inf
+41_cal225.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,213414.0,67553.0,614835.0,195456.0,2,inf
+42_cal226.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,214147.0,67753.0,616941.0,165652.0,2,inf
+43_cal228.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,131653.0,40540.0,375055.0,169000.0,2,inf
+44_cal229.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,131647.0,40489.0,375419.0,144120.0,3,inf
+45_cal26.aig.out.txt,0.08,UN_SAT,5300.0,1765.0,15207.0,22968.0,3,64.0
+46_cal27.aig.out.txt,0.2,UN_SAT,6097.0,2116.0,17534.0,25328.0,4,135.0
+47_cal3.aig.out.txt,0.05,UN_SAT,828.0,262.0,2382.0,23916.0,5,24.0
+48_cal32.aig.out.txt,0.03,UN_SAT,4353.0,1560.0,12496.0,22808.0,3,2.0
+49_cal33.aig.out.txt,0.06,UN_SAT,5257.0,1750.0,15193.0,22804.0,3,64.0
+4_exit.5.prop1-func-interl.aig.out.txt,6.9,UN_SAT,3639.0,1204.0,9400.0,72112.0,25,1068.0
+50_cal34.aig.out.txt,0.2,UN_SAT,6178.0,2123.0,17811.0,25644.0,4,139.0
+51_cal39.aig.out.txt,0.08,UN_SAT,3975.0,1271.0,11536.0,22556.0,3,77.0
+52_cal40.aig.out.txt,0.08,UN_SAT,3985.0,1273.0,11578.0,22596.0,3,77.0
+53_cal42.aig.out.txt,0.03,UN_SAT,2023.0,701.0,5772.0,20956.0,3,32.0
+54_cal5.aig.out.txt,0.05,UN_SAT,2286.0,817.0,6516.0,24908.0,5,37.0
+55_cal78.aig.out.txt,0.16,UN_SAT,61052.0,17472.0,169517.0,36924.0,4,72.0
+56_cal89.aig.out.txt,5.51,UN_SAT,25891.0,7758.0,74013.0,45940.0,6,610.0
+57_cal9.aig.out.txt,0.03,UN_SAT,816.0,260.0,2345.0,20236.0,3,16.0
+58_cal93.aig.out.txt,45.88,UN_SAT,31992.0,9490.0,91165.0,77360.0,8,1252.0
+59_cal94.aig.out.txt,38.72,UN_SAT,32040.0,9512.0,91245.0,73492.0,8,1058.0
+5_frogs.2.prop1-back-serstep.aig.out.txt,1.07,SAT,12274.0,3449.0,33934.0,31948.0,6,-inf
+60_gen14.aig.out.txt,0.03,UN_SAT,6540.0,2956.0,19013.0,21948.0,2,9.0
+61_gen19.aig.out.txt,0.03,UN_SAT,6629.0,2675.0,19273.0,21924.0,2,17.0
+62_gen23.aig.out.txt,0.62,UN_SAT,12013.0,4612.0,34629.0,35212.0,7,260.0
+63_gen25.aig.out.txt,0.03,UN_SAT,6348.0,2585.0,18478.0,29812.0,7,5.0
+64_gen31.aig.out.txt,1.43,UN_SAT,12775.0,4517.0,37204.0,31576.0,4,514.0
+65_gen32.aig.out.txt,0.03,UN_SAT,8200.0,2978.0,23781.0,25408.0,4,7.0
+66_gen33.aig.out.txt,0.04,UN_SAT,8219.0,2983.0,23283.0,27432.0,5,6.0
+67_gen43.aig.out.txt,0.65,UN_SAT,8317.0,3137.0,23864.0,25104.0,2,513.0
+68_gen44.aig.out.txt,0.71,UN_SAT,8296.0,3131.0,24344.0,25440.0,2,513.0
+69_mul1.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,42802.0,12234.0,113144.0,98940.0,1,inf
+6_frogs.5.prop1-func-interl.aig.out.txt,1.57,UN_SAT,12873.0,3327.0,36425.0,42708.0,9,27.0
+70_mul10.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,44133.0,12777.0,115698.0,107448.0,1,inf
+71_mul3.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,687346.0,196362.0,1804472.0,255636.0,1,inf
+72_mul4.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,43453.0,12466.0,114491.0,93404.0,1,inf
+73_mul9.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,44133.0,12777.0,115700.0,114792.0,1,inf
+74_Heap.aig.out.txt,0.53,UN_SAT,880.0,472.0,2523.0,63000.0,27,179.0
+75_h_TreeArb.aig.out.txt,0.1,UN_SAT,729.0,456.0,2052.0,39028.0,14,65.0
+76_h_b05.aig.out.txt,0.39,SAT,17930.0,8488.0,53643.0,40968.0,7,-inf
+77_usb_phy.aig.out.txt,0.09,SAT,1018.0,579.0,2882.0,34308.0,12,-inf
+78_vcegar_QF_BV_itc99_b13_p06.aig.out.txt,0.03,UN_SAT,162.0,115.0,421.0,20280.0,3,6.0
+79_vcegar_QF_BV_usb_phy_1.aig.out.txt,0.07,SAT,1018.0,579.0,2882.0,34480.0,12,-inf
+7_lamport_nonatomic.5.prop1-func-interl.aig.out.txt,15.37,UN_SAT,9149.0,2609.0,25353.0,83372.0,27,311.0
+80_vcegar_arrays_itc99_b12_p2.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,3090.0,1574.0,8768.0,4043916.0,323,inf
+81_vis_arrays_am2910_p1.aig.out.txt,0.03,UN_SAT,1433.0,499.0,4035.0,21208.0,3,13.0
+82_vis_arrays_buf_bug.aig.out.txt,0.29,SAT,493.0,163.0,1332.0,32776.0,11,-inf
+83_vis_arrays_bufferAlloc.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,498.0,163.0,1336.0,441968.0,29,inf
+84_vis_arrays_field5.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,2923.0,2084.0,8312.0,268860.0,6,inf
+85_vis_arrays_two_p1.aig.out.txt,0.58,SAT,487.0,155.0,1385.0,24484.0,6,-inf
+86_arbitrated_top_n2_w128_d16_e0.aig.out.txt,1886.28,SAT,56921.0,22216.0,153629.0,308864.0,18,-inf
+87_arbitrated_top_n2_w128_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,110804.0,42898.0,298661.0,507944.0,17,inf
+88_arbitrated_top_n2_w128_d64_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,218385.0,84187.0,588256.0,594296.0,12,inf
+89_arbitrated_top_n2_w16_d16_e0.aig.out.txt,120.79,SAT,8308.0,3176.0,22462.0,101704.0,18,-inf
+8_lann.4.prop1-back-serstep.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,3407.0,1116.0,9558.0,299436.0,4,inf
+90_arbitrated_top_n2_w16_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,15611.0,5938.0,42092.0,592616.0,31,inf
+91_arbitrated_top_n2_w32_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,112028.0,42852.0,301537.0,423168.0,21,inf
+92_arbitrated_top_n2_w64_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,219153.0,84132.0,590048.0,525772.0,14,inf
+93_arbitrated_top_n2_w8_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,31732.0,11892.0,85305.0,613156.0,39,inf
+94_arbitrated_top_n3_w128_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,648883.0,249599.0,1747431.0,771300.0,7,inf
+95_arbitrated_top_n3_w16_d16_e0.aig.out.txt,125.53,SAT,12240.0,4679.0,33101.0,97420.0,18,-inf
+96_arbitrated_top_n3_w16_d64_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,44704.0,16983.0,120375.0,473948.0,27,inf
+97_arbitrated_top_n3_w32_d16_e0.aig.out.txt,142.56,SAT,22546.0,8711.0,60931.0,111472.0,18,-inf
+98_arbitrated_top_n3_w32_d32_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,43454.0,16686.0,117169.0,510920.0,27,inf
+99_arbitrated_top_n3_w64_d128_e0.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,328138.0,125950.0,883564.0,769196.0,14,inf
+9_leader_election.3.prop1-back-serstep.aig.out.txt,TIMEOUT BY /usr/bin/timeout,,36548.0,10486.0,105436.0,239172.0,4,inf
