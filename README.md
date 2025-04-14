@@ -62,7 +62,7 @@ Since these tests require a long time to run, we also allow the option to run th
 * `Dockerfile` - dockerfile to run the PDR/PDRER solver as a standalone tool for proving AIG files
 * `convert.py` - script to produce AIGER benchmarks
 * `experiment_script` - script to run the experiments
-```
+
 
 For viewing the implementation of our project one can refer to `pdrer_crate` this is a standalone crate (rust's terminology for a library) that includes many of the data-structures required to implement the solver. This library can be compiled using `cargo build` and be used and expanded on outside the scope of this artifact. For viewing the documentation for the library run `cd pdrer_crate ; cargo doc --open` provided you have rust installed.
 
