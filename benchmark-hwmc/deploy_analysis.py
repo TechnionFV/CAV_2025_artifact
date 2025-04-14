@@ -66,9 +66,10 @@ def __individual_analysis(work_dir: str, deployments) -> (
                 simp_datapoint_name = datapoint_name.replace(' ', '').replace(',', '').replace('\\',
                                                                                                '')
                 if simp_datapoint_name != datapoint_name:
-                    print(
-                        f"Warning: The key `{datapoint_name}` contains spaces, commas or other characters that prevent SQL queries on this column",
-                        file=sys.stderr, flush=True)
+                    pass
+                    # print(
+                    #     f"Warning: The key `{datapoint_name}` contains spaces, commas or other characters that prevent SQL queries on this column",
+                    #     file=sys.stderr, flush=True)
                 header += [datapoint_name]
             csv_results[example_name] = output_datapoints
 
@@ -224,6 +225,10 @@ def main():
     utils.run_cmd(f"cp -r {work_dir}/results ./results")
 
     print(commit_msg , flush=True)
+    # print CSV file
+    with open(f"{work_dir}/results/deployment_0.csv") as f:
+        print(f.read())
+
     # commit
     # utils.run_cmd("git add .")
     # utils.run_cmd('git config user.email "automatic.commit@notreal.notreal"')

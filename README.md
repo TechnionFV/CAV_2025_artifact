@@ -199,3 +199,14 @@ docker rmi docker-tool
 * Explain in sufficient detail how the artifact can be used beyond the paper.
 * If the artifact is not open source, provide documented interfaces for extensions.
 * Explain how the artifact can be used in a different environment, e.g. built on another system, used outside of the Docker or VM image, etc. -->
+
+
+
+# Note
+
+* 88 nodes the rest is TMI.
+* Remove the "hasn't been released yet", "we will make the github repository public"
+* print the CSV
+* remove warnings from exp run
+* Get a more interesting subset
+* Out solver expects an AIG with a single safety property (the old AIGER format prior to 1.9)
