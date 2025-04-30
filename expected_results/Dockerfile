@@ -12,5 +12,5 @@ WORKDIR /usr/src/graph_maker
 
 COPY . .
 
-ENTRYPOINT [ "python3", "./src/main.py" ]
-CMD [ "./src/main.py" ]
+ENTRYPOINT [ "python3", "./make_graphs.py" ]
+CMD [ "./make_graphs.py" ]
