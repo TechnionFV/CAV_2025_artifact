@@ -6,6 +6,7 @@ import
 import csv
 import json
 import math
+import os
 
 import matplotlib.pyplot as plt
 
@@ -57,6 +58,20 @@ def save_figure(name: str, close=True):
     if close:
         plt.close()
 
+def read_csv_file(path: str, key_column = "model") -> dataFrame:
+    df = {}
+    with open(path) as csvfile:
+        reader = csv.reader(csvfile)
+        rows = [r for r in reader]
+        header: list[str] = rows[0]
+        key_index = header.index(key_column)
+        for row in rows[1:]:
+            key = row[key_index]
+            value = {}
+            for i, h in enumerate(header):
+                value[h] = row[i]
+            df[key] = value
+    return df
 
 def read_csv_files() -> list[dataFrame]:
     r = []
@@ -615,7 +630,6 @@ def make_plots(time_limit: int, hwmcc_number: int):
         } for i in ["abc PDR", "rfv PDR", "rfv PDRER"]
     ]
     TARGET = f"./graphs/HWMCC{hwmcc_number}"
-    import os
     os.system(f"mkdir -p {TARGET}")
     # To get consistent SVG graphs (SVGs don't change if the data does not change)
     # uuid.UUID(int=1234567890123456798, version=4)
@@ -629,77 +643,54 @@ def make_plots(time_limit: int, hwmcc_number: int):
     print("DONE")
 
 
-"""
-"Virtual Best": {
-        "Average Depth": 30.823343848580443,
-        "Average Time": 1026.9016088328087,
-        "Latex tabular": "& VB & 239 & 43 & 196 & & 1026.9 & 30.8 \\",
-        "Solved": 239,
-        "Solved (SAT)": 43,
-        "Solved (UN-SAT)": 196,
-        "Total Depth": 9771,
-        "Total Time": 325527.81000000035
-    },
-    "abc PDR results:": {
-        "Average Depth": 47.47634069400631,
-        "Average Invariant Size": 1558.0054054054053,
-        "Average Time": 1274.6389274447959,
-        "Latex tabular": "& abc PDR & 212 & 27 & 185 & 2 & 1274.6 & 47.5 \\",
-        "Solved": 212,
-        "Solved (SAT)": 27,
-        "Solved (UN-SAT)": 185,
-        "Total Depth": 15050,
-        "Total Time": 404060.54000000027,
-        "Unique Wins": {
-            "131_shift_register_top_w64_d64_e0.aig.out.txt": 1790.14,
-            "133_shift_register_top_w8_d128_e0.aig.out.txt": 2439.77
-        }
-    },
-    "rfv PDR results:": {
-        "Average Depth": 42.34384858044164,
-        "Average Invariant Size": 1644.1139896373056,
-        "Average Time": 1104.4046056782336,
-        "Latex tabular": "& rfv PDR & 233 & 40 & 193 & 1 & 1104.4 & 42.3 \\",
-        "Solved": 233,
-        "Solved (SAT)": 40,
-        "Solved (UN-SAT)": 193,
-        "Total Depth": 13423,
-        "Total Time": 350096.26,
-        "Unique Wins": {
-            "198_picorv32_mutCY_nomem-p4.aig.out.txt": 2435.11
-        }
-    },
-    "rfv PDRER results:": {
-        "Average Depth": 39.51735015772871,
-        "Average Invariant Size": 1850.8469387755101,
-        "Average Time": 1082.4000000000008,
-        "Latex tabular": "& rfv PDRER & 236 & 40 & 196 & 2 & 1082.4 & 39.5 \\",
-        "Solved": 236,
-        "Solved (SAT)": 40,
-        "Solved (UN-SAT)": 196,
-        "Total Depth": 12527,
-        "Total Time": 343120.8000000002,
-        "Unique Wins": {
-            "199_picorv32_mutCY_nomem-p5.aig.out.txt": 3134.43,
-            "83_vis_arrays_bufferAlloc.aig.out.txt": 2972.2
-        }
-    }
-    """
 
 def print_final_table():
-    r = "=" * 70 + "\n"
-    r += "Set      | Solver   | #Solved | #SAFE | #UNSAFE | #Unique | Avg. Time\n"
-    r += "-" * 70 + "\n"
+    r = "=" * 80 + "\n"
+    r += "     Set \t| Solver \t|#Solved|#UNSAFE| #SAFE |#Unique| Avg. Time\n"
+    r += "-" * 80 + "\n"
     for i in [19, 20, 24]:
         r19 = json.load(open(f"./graphs/HWMCC{i}/recap.json"))
         for j, k in enumerate(["abc PDR", "rfv PDR", "rfv PDRER"]):
             name = k
             k = f"{k} results:"
-            r += f"HWMCC'{i} | {name}\t| {r19[k]['Solved']}\t| {r19[k]['Solved (UN-SAT)']}\t| {r19[k]['Solved (SAT)']}\t| {len(r19[k]['Unique Wins'])}\t| {r19[k]['Average Time']:.1f}\n"
-        r += "-" * 70 + "\n"
-        r += f"         | VB          | {r19['Virtual Best']['Solved']}\t| {r19['Virtual Best']['Solved (UN-SAT)']}\t| {r19['Virtual Best']['Solved (SAT)']}\t| \t| {r19['Virtual Best']['Average Time']:.1f}\n"
-        r += "=" * 70 + "\n"
-    print(r)
+            r += f"HWMCC'{i}\t| {name}\t| {r19[k]['Solved']}\t| {r19[k]['Solved (SAT)']}\t| {r19[k]['Solved (UN-SAT)']}\t| {len(r19[k]['Unique Wins'])}\t| {r19[k]['Average Time']:.1f}\n"
+        r += "-" * 80 + "\n"
+        r += f"         \t| VB  \t\t| {r19['Virtual Best']['Solved']}\t| {r19['Virtual Best']['Solved (SAT)']}\t| {r19['Virtual Best']['Solved (UN-SAT)']}\t| \t| {r19['Virtual Best']['Average Time']:.1f}\n"
+        r += "=" * 80 + "\n"
+    
+    os.system(f"mkdir -p ./graphs/in_paper")
+    with open(f"./graphs/in_paper/hwmcc_results_table.txt", "w") as f:
+        f.write(r)
+
+
+def print_aux_vars_table():
+    N = 150
+    r = "=" * N + "\n"
+    r += "     Set \t| #Instances \t| #Instances using AVs \t| Average AVs  | XOR %\t| Invariants using AVs\t| Average AVs in invariants\t| XOR %\n"
+    r += "-" * N + "\n"
+    for i in [19, 20, 24]:
+        df = read_csv_file(f"./rfv PDRER HWMCC{i}.csv")
+        instances = len(df)
+        instances_using_avs = len([x for x in df if int(df[x]['AuxVars']) > 0])
+        average_avs = round(sum([int(df[x]['AuxVars']) for x in df]) / instances_using_avs)
+        xor_percentage = round((sum([int(df[x]['XorAuxVars']) / int(df[x]['AuxVars']) for x in df if int(df[x]['AuxVars']) > 0]) / instances_using_avs) * 100)
+        
+        invariants_using_avs = len([x for x in df if int(df[x]['UsedAuxVars']) > 0])
+        average_used_avs = round(sum([int(df[x]['UsedAuxVars']) for x in df]) / invariants_using_avs)
+        used_xor_percentage = round((sum([int(df[x]['UsedXorAuxVars']) / int(df[x]['UsedAuxVars']) for x in df if int(df[x]['UsedAuxVars']) > 0]) / invariants_using_avs) * 100)
+        r += f"HWMCC'{i} \t| {instances}\t\t| {instances_using_avs}\t\t\t\t| {average_avs}\t\t\t| {xor_percentage}%\t| \t{invariants_using_avs}\t\t\t\t| {average_used_avs}\t\t\t\t\t\t| {used_xor_percentage}%\n"
+    r += "=" * N + "\n"
+
+    # print(r)
+    os.system(f"mkdir -p ./graphs/in_paper")
+    with open(f"./graphs/in_paper/av_table.txt", "w") as f:
+        f.write(r)
+
+
+def copy_proof_comparison_plots():
+    os.system("cp ./graphs/HWMCC24/invariant_size_scatter_plot_1_and_2.png                  ./graphs/in_paper/a_hwmcc24_invariant_size.png")
+    os.system("cp ./graphs/HWMCC24/last_common_depth_trace_size_scatter_plot_1_and_2.png    ./graphs/in_paper/b_hwmcc24_trace_size.png")
+    os.system("cp ./graphs/HWMCC24/last_common_depth_po_size_scatter_plot_1_and_2.png       ./graphs/in_paper/c_hwmcc24_proof_obligations.png")
 
 
 def main():
@@ -707,6 +698,8 @@ def main():
     make_plots(time_limit=3600, hwmcc_number=20)
     make_plots(time_limit=3600, hwmcc_number=24)
     print_final_table()
+    print_aux_vars_table()
+    copy_proof_comparison_plots()
     
 
 
