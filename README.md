@@ -126,6 +126,19 @@ docker run exp --local -c 1 -d 8 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --
 docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./rfv_PDRER_HWMCC19_vis.csv
 ```
 
+#### Part d
+
+To reproduce the plots from the data we included the scripts we used to re-create the plots and tables we presented in the paper.
+To make these plots yourself you can run:
+```
+docker build -t graph_maker_image expected_results/.
+docker run graph_maker_image
+docker cp $(docker ps -aq | head -n 1):/usr/src/graph_maker/graphs/in_paper ./paper_plots
+```
+Estimated Time: 10 seconds
+
+Check that the plots match those of the paper
+
 ## Re-producing all benchmarks
 
 To reproduce all benchmarks with 8 cores run:
