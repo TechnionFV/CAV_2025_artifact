@@ -410,19 +410,11 @@ def analyze_output(output: str) -> dict[str, str]:
         "Memory (kB)": get_memory_usage_using_bin_time(output=output),
         "InvariantSize": o_get_invariant_size(output=output),
         "AuxVars": o_get_number_of_auxiliary_variables(output=output),
-        "AndAuxVars": lambda o: o_get_number_of_defined_auxiliary_vars(
-            output=o, var="AND"
-        ),
-        "XorAuxVars": lambda o: o_get_number_of_defined_auxiliary_vars(
-            output=o, var="XOR"
-        ),
+        "AndAuxVars": o_get_number_of_defined_auxiliary_vars(output=output, var="AND"),
+        "XorAuxVars": o_get_number_of_defined_auxiliary_vars(output=output, var="XOR"),
         "UsedAuxVars": o_get_number_of_used_auxiliary_variables(output=output),
-        "UsedAndAuxVars": lambda o: o_get_number_of_used_auxiliary_variables_custom(
-            output=o, var="AND"
-        ),
-        "UsedXorAuxVars": lambda o: o_get_number_of_used_auxiliary_variables_custom(
-            output=o, var="XOR"
-        ),
+        "UsedAndAuxVars": o_get_number_of_used_auxiliary_variables_custom(output=output, var="AND"),
+        "UsedXorAuxVars": o_get_number_of_used_auxiliary_variables_custom(output=output, var="XOR"),
         "TraceSizes": o_get_trace_sizes(output=output),
         "POSizes": o_get_proof_obligation_sizes(output=output),
     }
