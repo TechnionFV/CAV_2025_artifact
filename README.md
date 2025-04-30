@@ -108,7 +108,13 @@ docker run exp --local -c 1 -d 8 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --
 Estimated Time: 10 minutes
 
 Each experiment produces amongst other things a results CSV file that is available in the path `/usr/src/benchmark-hwmc/results/deployment_0.csv` inside the container.
-For convince the CSV is also printed at the end of an experiment run. 
+To extract the file from the container you can run:
+```
+docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./result.csv
+```
+To clarify `docker ps -aq | head -n 1` returns the container ID of the last run container
+so the command presented should be run immediately after running the exp container.
+For further convince the CSV is also printed at the end of the experiment run.
 
 The directory `expected_results` includes the results we got on all the experiments as a reference.
 
