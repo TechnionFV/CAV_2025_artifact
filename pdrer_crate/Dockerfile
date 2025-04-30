@@ -1,5 +1,5 @@
 # Stage 1: Builder stage to compile the Rust application
-FROM rust:1.86 as builder
+FROM rust:1.86 AS builder
 # Set the working directory inside the container
 WORKDIR /usr/src/rust_code
 # Copy the Cargo manifest first for efficient caching
