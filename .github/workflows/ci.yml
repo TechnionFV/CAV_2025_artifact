@@ -38,3 +38,13 @@ jobs:
       - run: cat /tmp/result.csv
       - run: docker run exp --local -c 1 -d 8 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis |& tee log_file.txt
       - run: cat log_file.txt
+  
+  check-plots-dockerfile:
+    name: expected_results/Dockerfile
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v3
+      - run: docker build -t graph_maker_image expected_results/.
+      - run: docker run graph_maker_image
+      - run: docker cp $(docker ps -aq | head -n 1):/usr/src/graph_maker/graphs/in_paper ./paper_plots
