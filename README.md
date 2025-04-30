@@ -119,11 +119,11 @@ For further convince the CSV is also printed at the end of the experiment run.
 In conclusion, one can run the following commands to produce the results for HWMCC19 on the vis subset:
 ```
 docker run exp --local -c 1 -d 0 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
-docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./abc_PDR_HWMCC19.csv
+docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./abc_PDR_HWMCC19_vis.csv
 docker run exp --local -c 1 -d 7 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
-docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./rfv_PDR_HWMCC19.csv
+docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./rfv_PDR_HWMCC19_vis.csv
 docker run exp --local -c 1 -d 8 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
-docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./rfv_PDRER_HWMCC19.csv.csv
+docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./rfv_PDRER_HWMCC19_vis.csv
 ```
 
 ## Re-producing all benchmarks
