@@ -116,7 +116,15 @@ To clarify `docker ps -aq | head -n 1` returns the container ID of the last run 
 so the command presented should be run immediately after running the exp container.
 For further convince the CSV is also printed at the end of the experiment run.
 
-The directory `expected_results` includes the results we got on all the experiments as a reference.
+In conclusion, one can run the following commands to produce the results for HWMCC19 on the vis subset:
+```
+docker run exp --local -c 1 -d 0 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
+docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./abc_PDR_HWMCC19.csv
+docker run exp --local -c 1 -d 7 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
+docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./rfv_PDR_HWMCC19.csv
+docker run exp --local -c 1 -d 8 -t 30 --suit hwmcc19_fold_fraigy_orchestrate --tests vis
+docker cp $(docker ps -aq | head -n 1):/usr/src/benchmark-hwmc/results/deployment_0.csv ./rfv_PDRER_HWMCC19.csv.csv
+```
 
 ## Re-producing all benchmarks
 
@@ -142,6 +150,8 @@ Since running this is too long you can choose to run specific tests and compare 
 ```
 docker run exp --local -c 8 -d 7 -t 3600 --suit hwmcc<number>_fold_fraigy_orchestrate --tests <test_name_1> <test_name_2> ...
 ```
+
+The directory `expected_results` includes the results we got on all the experiments as a reference.
 
 ## Input Files
 
