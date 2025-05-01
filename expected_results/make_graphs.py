@@ -7,6 +7,7 @@ import csv
 import json
 import math
 import os
+import sys
 
 import matplotlib.pyplot as plt
 
@@ -169,6 +170,7 @@ def get_results_of_run(dfs: list[dataFrame], i: int) -> list[(str, float)]:
     return vals
 
 
+ZOOM_IN_COMPETITION = False
 def make_competition_graph(dfs: list[dataFrame]):
     functions: list[list[float]] = []
     virtual_best = None
@@ -192,12 +194,12 @@ def make_competition_graph(dfs: list[dataFrame]):
 
     plt.xlabel("Time (sec)")
     plt.ylabel("# solved instances")
-    # if True:
-    #     plt.ylim(ymin=450)
-    #     for y in [500, 550, 600]:
-    #         plt.axhline(y=y, color='grey', ls=':')
-    #     for x in range(500, 3600, 1000):
-    #         plt.axvline(x=x, color='grey', ls='dotted')
+    if True:
+        plt.ylim(ymin=450)
+        for y in [500, 550, 600]:
+            plt.axhline(y=y, color='grey', ls=':')
+        for x in range(500, 3600, 1000):
+            plt.axvline(x=x, color='grey', ls='dotted')
     # if True:
     #     plt.ylim(ymin=130)
     #     for y in range(140, 191, 20):
@@ -611,7 +613,41 @@ API
 """
 
 
-def make_plots(time_limit: int, hwmcc_number: int):
+
+def merge_deployments(paths: list[str], destination: str):
+    seen_in_previous_sets = set()
+    result_rows = []
+    total_rows = 0
+    field_names = None
+    for path in paths:
+        helper_seen = set()
+        with open(path, newline='') as csvfile:
+            reader = csv.DictReader(csvfile)
+            assert field_names is None or field_names == reader.fieldnames
+            field_names = reader.fieldnames
+
+            for row in reader:
+                total_rows += 1
+                model_name = row["model"]
+                r = model_name.split("_", 1)
+                name = r[1]
+                if name in seen_in_previous_sets:
+                    continue
+                helper_seen.add(name)
+                result_rows.append(row)
+        seen_in_previous_sets.update(helper_seen)
+    print(f"filtered rows = {len(result_rows)}, original rows = {total_rows}")
+
+    with open(destination, 'w', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=field_names)
+        writer.writeheader()
+        for r in result_rows:
+            writer.writerow(r)
+
+    return None
+
+
+def make_plots(time_limit: int, hwmcc_number: str, include_abc: bool = True):
     global TEST_TIME
     global FILES
     global TARGET
@@ -627,7 +663,7 @@ def make_plots(time_limit: int, hwmcc_number: int):
             "trace column": "TraceSizes",
             "po column": "POSizes",
             "invariant column": "InvariantSize"
-        } for i in ["abc PDR", "rfv PDR", "rfv PDRER"]
+        } for i in (["abc PDR", "rfv PDR", "rfv PDRER"] if include_abc else ["rfv PDR", "rfv PDRER"])
     ]
     TARGET = f"./graphs/HWMCC{hwmcc_number}"
     os.system(f"mkdir -p {TARGET}")
@@ -691,9 +727,36 @@ def copy_proof_comparison_plots():
     os.system("cp ./graphs/HWMCC24/invariant_size_scatter_plot_1_and_2.png                  ./graphs/in_paper/a_hwmcc24_invariant_size.png")
     os.system("cp ./graphs/HWMCC24/last_common_depth_trace_size_scatter_plot_1_and_2.png    ./graphs/in_paper/b_hwmcc24_trace_size.png")
     os.system("cp ./graphs/HWMCC24/last_common_depth_po_size_scatter_plot_1_and_2.png       ./graphs/in_paper/c_hwmcc24_proof_obligations.png")
+    os.system("cp ./graphs/HWMCC19_20/invariant_size_scatter_plot_0_and_1.png               ./graphs/in_paper/d_hwmcc19_20_invariant_size.png")
+    os.system("cp ./graphs/HWMCC19_20/last_common_depth_trace_size_scatter_plot_0_and_1.png ./graphs/in_paper/e_hwmcc19_20_trace_size.png")
+    os.system("cp ./graphs/HWMCC19_20/last_common_depth_po_size_scatter_plot_0_and_1.png    ./graphs/in_paper/f_hwmcc19_20_proof_obligations.png")
+    
+    os.system("cp ./graphs/HWMCC19_20_24/competition_plot.png                               ./graphs/in_paper/hwmcc_results_cactus_plot.png")
+    os.system("cp ./graphs/HWMCC19_20_24/time_scatter_plot_0_and_1.png                      ./graphs/in_paper/hwmcc_results_scatter_plot.png")
 
 
 def main():
+    merge_deployments(
+        paths=["./rfv PDRER HWMCC19.csv", "./rfv PDRER HWMCC20.csv", "./rfv PDRER HWMCC24.csv"],
+        destination="./rfv PDRER HWMCC19_20_24.csv"
+    )
+    merge_deployments(
+        paths=["./rfv PDR HWMCC19.csv", "./rfv PDR HWMCC20.csv", "./rfv PDR HWMCC24.csv"],
+        destination="./rfv PDR HWMCC19_20_24.csv"
+    )
+    merge_deployments(
+        paths=["./rfv PDR HWMCC19.csv", "./rfv PDR HWMCC20.csv"],
+        destination="./rfv PDR HWMCC19_20.csv"
+    )
+    merge_deployments(
+        paths=["./rfv PDRER HWMCC19.csv", "./rfv PDRER HWMCC20.csv"],
+        destination="./rfv PDRER HWMCC19_20.csv"
+    )
+    global ZOOM_IN_COMPETITION
+    ZOOM_IN_COMPETITION = True
+    make_plots(time_limit=3600, hwmcc_number="19_20_24", include_abc=False)
+    ZOOM_IN_COMPETITION = False
+    make_plots(time_limit=3600, hwmcc_number="19_20", include_abc=False)
     make_plots(time_limit=3600, hwmcc_number=19)
     make_plots(time_limit=3600, hwmcc_number=20)
     make_plots(time_limit=3600, hwmcc_number=24)
